@@ -4,167 +4,1078 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destrouch Gel - Professional Cockroach Killer</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap">
     <style>
         :root {
-            --red: #C8102E;
-            --white: #FFFFFF;
-            --black: #000000;
+            --primary-red: #C8102E;
+            --primary-dark: #9E0021;
+            --pure-white: #FFFFFF;
+            --off-white: #F9F9F9;
+            --light-gray: #EEEEEE;
+            --medium-gray: #888888;
+            --deep-black: #222222;
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
         }
 
         body {
-            background: var(--white);
-            color: var(--black);
+            font-family: 'Open Sans', sans-serif;
+            color: var(--deep-black);
+            line-height: 1.6;
+            background-color: var(--off-white);
         }
 
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
         .header {
-            background: var(--red);
-            padding: 2rem;
-            text-align: center;
+            background-color: var(--pure-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        
+            padding: 15px 0;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .brand-logo {
+            height: 40px;
+            margin-right: 10px;
         }
 
         .brand-title {
-            color: var(--white);
-            font-size: 2.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            color: var(--primary-red);
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+            font-weight: 700;
         }
 
-        .product-hero {
-            max-width: 1200px;
-            margin: 3rem auto;
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--deep-black);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-item {
+            margin-left: 30px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--deep-black);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-red);
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-red);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fff 0%, #f5f5f5 100%);
+            padding: 80px 0;
+        }
+
+        .hero-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            padding: 1rem;
+            gap: 60px;
+            align-items: center;
         }
 
-        /* IMAGE CONTAINERS - REPLACE THESE */
-        .main-product-image {
-            background: var(--white);
-            border: 3px solid var(--red);
-            border-radius: 10px;
-            height: 500px;
-            overflow: hidden;
+        .hero-content h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--deep-black);
         }
-        
-        .main-product-image img {
+
+        .hero-content h1 span {
+            color: var(--primary-red);
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--medium-gray);
+            margin-bottom: 30px;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .product-image {
             width: 100%;
-            height: 100%;
-            object-fit: contain;
+           
         }
 
-        .gallery-grid {
+      
+
+        .badge {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            background-color: var(--primary-red);
+            color: var(--pure-white);
+            font-weight: 700;
+            padding: 15px;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transform: rotate(10deg);
+        }
+
+        .badge-text {
+            font-size: 0.9rem;
+            line-height: 1.2;
+        }
+
+        .badge-value {
+            font-size: 1.5rem;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: var(--pure-white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--deep-black);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-red);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title p {
+            color: var(--medium-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: flex;
+            flex-direction: row;
+           width: 100%;
+           justify-content: center;
+           align-items:center;
+        }
+
+        .feature-card {
+            
+           
+            padding: 10px;
+            text-align: center;
+      
+        }
+
+     
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-red);
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--deep-black);
+        }
+
+        .feature-text {
+            color: var(--medium-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Specs Section */
+        .specs {
+            padding: 80px 0;
+            background-color: var(--off-white);
+        }
+
+        .specs-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            margin-top: 1rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
         }
 
-        .gallery-item {
-            border: 2px solid var(--black);
-            border-radius: 8px;
-            height: 200px;
-            background: var(--white);
+        .specs-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            color: var(--deep-black);
         }
 
-        .product-info {
-            padding: 1rem;
+        .specs-list {
+            margin-bottom: 30px;
         }
 
-        .specs-box {
-            border: 2px solid var(--red);
-            border-radius: 10px;
-            padding: 2rem;
-            margin: 2rem 0;
+        .spec-item {
+            margin-bottom: 25px;
+        }
+
+        .spec-title {
+            font-size: 1.2rem;
+            color: var(--primary-red);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .spec-title:before {
+            content: '•';
+            color: var(--primary-red);
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+
+        .spec-details {
+            padding-left: 25px;
+        }
+
+        .spec-details li {
+            margin-bottom: 8px;
+            color: var(--medium-gray);
+        }
+
+        .specs-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background-color: var(--pure-white);
+        }
+
+        .testimonials-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background-color: var(--off-white);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .testimonial-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--deep-black);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            font-size: 1.1rem;
+            color: var(--deep-black);
+        }
+
+        .author-info p {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+        }
+
+        .quote-icon {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 4rem;
+            color: rgba(200, 16, 46, 0.1);
+        }
+
+        /* Order Section */
+        .order {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--deep-black) 0%, #333 100%);
+            color: var(--pure-white);
+        }
+
+        .order-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .order-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .order-content p {
+            margin-bottom: 30px;
+            color: #ccc;
         }
 
         .price-tag {
-            font-size: 2.5rem;
-            color: var(--red);
-            margin: 1rem 0;
+            font-size: 3rem;
+            color: var(--pure-white);
+            margin-bottom: 30px;
+            font-weight: 700;
         }
 
-        .cta-button {
-            background: var(--red);
-            color: var(--white);
-            padding: 1rem 3rem;
+        .price-tag span {
+            font-size: 1.2rem;
+            vertical-align: super;
+            margin-right: 5px;
+        }
+
+        .guarantee {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .guarantee-icon {
+            font-size: 2rem;
+            color: var(--primary-red);
+            margin-right: 15px;
+        }
+
+        .guarantee-text {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .order-form {
+            background-color: var(--pure-white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-title {
+            font-size: 1.5rem;
+            color: var(--deep-black);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--deep-black);
+            font-size: 0.9rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid var(--light-gray);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-red);
+            box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.2);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: var(--primary-red);
+            color: var(--pure-white);
             border: none;
-            border-radius: 30px;
-            font-size: 1.1rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
             cursor: pointer;
-            transition: opacity 0.3s;
+            transition: var(--transition);
+            text-align: center;
+            text-decoration: none;
         }
 
-        .cta-button:hover {
-            opacity: 0.9;
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(200, 16, 46, 0.3);
+        }
+
+        .btn-block {
+            display: block;
+            width: 100%;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background-color: var(--off-white);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .faq-question {
+            background-color: var(--pure-white);
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .faq-question h3 {
+            font-size: 1.1rem;
+            color: var(--deep-black);
+        }
+
+        .faq-question:hover {
+            background-color: #f5f5f5;
+        }
+
+        .faq-answer {
+            background-color: var(--pure-white);
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-answer p {
+            padding: 20px 0;
+            color: var(--medium-gray);
+        }
+
+        .faq-item.active .faq-question {
+            background-color: var(--primary-red);
+            color: var(--pure-white);
+        }
+
+        .faq-item.active .faq-question h3 {
+            color: var(--pure-white);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--deep-black);
+            color: var(--pure-white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-logo {
+            color: var(--pure-white);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .footer-text {
+            color: #aaa;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            max-width: 300px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--pure-white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--primary-red);
+            transform: translateY(-3px);
+        }
+
+        .footer-title {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--pure-white);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-link {
+            margin-bottom: 10px;
+        }
+
+        .footer-link a {
+            color: #aaa;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .footer-link a:hover {
+            color: var(--primary-red);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-container,
+            .specs-container,
+            .order-container,
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .badge {
+                width: 80px;
+                height: 80px;
+                top: -10px;
+                right: -10px;
+            }
+
+            .badge-value {
+                font-size: 1.2rem;
+            }
         }
 
         @media (max-width: 768px) {
-            .product-hero {
+            .nav-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--pure-white);
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                transform: translateY(-150%);
+                transition: var(--transition);
+                z-index: 99;
+            }
+
+            .nav-menu.active {
+                transform: translateY(0);
+            }
+
+            .nav-item {
+                margin: 10px 0;
+            }
+
+            .features-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+ 
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .specs-content h2,
+            .order-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .price-tag {
+                font-size: 2.5rem;
             }
         }
     </style>
 </head>
 <body>
     <header class="header">
-        <h1 class="brand-title">DESTROUCH GEL</h1>
+        <div class="container header-container">
+            <div class="brand">
+             
+                <h1 class="brand-title">DESTROUCH</h1>
+            </div>
+            <button class="nav-toggle" id="navToggle">☰</button>
+            <nav class="hamicon">
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+                    <li class="nav-item"><a href="#specs" class="nav-link">Specifications</a></li>
+                    <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                    <li class="nav-item"><a href="#order" class="nav-link">Order Now</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="product-hero">
-            <!-- MAIN PRODUCT IMAGE -->
-            <div class="main-product-image">
-                <!-- REPLACE THIS IMAGE -->
-                <img src="IMAGES/main-product.jpg" alt="Destrouch Gel Packaging">
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Professional <span>Cockroach Killer</span> Gel Solution</h1>
+                <p>Destrouch Gel is a highly effective insecticide designed to eradicate all species of cockroaches. Its natural formula ensures long-lasting results without harmful chemicals.</p>
+                <a href="#order" class="btn">Order Now</a>
             </div>
+            <div class="hero-image">
+                <img src="https://i.ibb.co/RGYwQpMJ/tchka-dwa-removebg-preview-1.png" alt="Destrouch Gel - Cockroach Killer" class="product-image">
+                <div class="badge">
+                    <div class="badge-text">Only</div>
+                    <div class="badge-value">$19.99</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="product-info">
-                <h2 style="color: var(--red);">Professional Cockroach Elimination</h2>
-                <p style="margin: 1rem 0;">Advanced gel formula with natural ingredients for complete pest control.</p>
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Precautions for use </h2>
+                <p>for safety reasons do not apply to areas accessible to children and pets.wash your hands after each use </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><img  style="width: 100px;height: auto;" src="https://i.ibb.co/4nv5SFzV/png-transparent-man-recycling-trash-blue-paper-guy-can-litter-rubbish-garbage-thumbnail.png"/></div>    
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><img style="width:100px;height: auto;" src="https://i.ibb.co/CpP4C8Hv/no-kids.png"/></div>
+                  
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><img  style="width: 100px;height: auto;" src="https://i.ibb.co/WW8RhqmD/ppe-hand-gloves-blue-round-icon-704081694792206o375ayzq1k.png"/></div>
+                    
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><img  style="width:100px;height: auto;" src="https://i.ibb.co/LdPJm2KV/44077-AF-WEB-600.png"/></div>
+                    
+                </div> <div class="feature-card">
+                    <div class="feature-icon"><img  style="width:100px;height: auto;" src=" https://i.ibb.co/GY4ywBD/3182561.png"/></div>
+                    
+         
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="specs" id="specs">
+        <div class="container specs-container">
+            <div class="specs-content">
+                <h2>Technical Specifications</h2>
+                <div class="specs-list">
+                    <div class="spec-item">
+                        <h3 class="spec-title">Composition</h3>
+                        <ul class="spec-details">
+                            <li><strong>Aspect & Color:</strong> Brown Gel</li>
+                            <li><strong>Active Ingredient:</strong> Oleandrine (Laurier-Rose)</li>
+                            <li><strong>Attractants:</strong> Eggs, Sugar</li>
+                            <li><strong>Base:</strong> Water</li>
+                        </ul>
+                    </div>
+                    <div class="spec-item">
+                        <h3 class="spec-title">Usage Instructions</h3>
+                        <ol class="spec-details">
+                            <li>Remove the cap carefully.</li>
+                            <li>Apply small drops (approx. 3mm diameter) to affected areas.</li>
+                            <li>Close the cap after each use.</li>
+                            <li>Use the product within 6 months of opening.</li>
+                        </ol>
+                    </div>
+                    <div class="spec-item">
+                        <h3 class="spec-title">Precautions</h3>
+                        <ul class="spec-details">
+                            <li>Keep out of reach of children and pets.</li>
+                            <li>Wash hands thoroughly after use.</li>
+                            <li>Store in a cool, dry place away from direct sunlight.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="specs-image">
                 
-                <div class="specs-box">
-                    <h3>Key Features</h3>
-                    <ul style="margin: 1rem 0; list-style: none;">
-                        <li>✔️ Long-lasting protection</li>
-                        <li>✔️ Child-safe formula</li>
-                        <li>✔️ Easy application</li>
-                    </ul>
-                </div>
 
-                <div class="price-tag">299 DZD</div>
-                <button class="cta-button">Order Now</button>
+                <img src="https://i.ibb.co/DHwX9RSb/3tchkat.jpg" alt="Destrouch Gel Application" />
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- IMAGE GALLERY -->
-        <section style="max-width: 1200px; margin: 3rem auto; padding: 1rem;">
-            <h3 style="color: var(--red); margin-bottom: 1rem;">Application Examples</h3>
-            <div class="gallery-grid">
-                <!-- REPLACE THESE IMAGES -->
-                <div class="gallery-item">
-                    <img src="IMAGES/application-1.jpg" alt="Kitchen application" style="height: 100%; width: 100%; object-fit: cover;">
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Customer Testimonials</h2>
+                <p>See what our satisfied customers have to say about Destrouch Gel</p>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"I've tried numerous products to get rid of cockroaches in my kitchen, but nothing worked until I found Destrouch Gel. Within days, the problem was completely solved!"</p>
+                    <div class="testimonial-author">
+                        <img src="/placeholder.svg?height=60&width=60" alt="Sarah Johnson" class="author-image">
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Homeowner</p>
+                        </div>
+                    </div>
+                    <div class="quote-icon">"</div>
                 </div>
-                <div class="gallery-item">
-                    <img src="IMAGES/application-2.jpg" alt="Bathroom application" style="height: 100%; width: 100%; object-fit: cover;">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"As a pest control professional, I've added Destrouch Gel to my toolkit and the results have been impressive. I highly recommend it for both residential and commercial use."</p>
+                    <div class="testimonial-author">
+                        <img src="/placeholder.svg?height=60&width=60" alt="Michael Rodriguez" class="author-image">
+                        <div class="author-info">
+                            <h4>Michael Rodriguez</h4>
+                            <p>Pest Control Specialist</p>
+                        </div>
+                    </div>
+                    <div class="quote-icon">"</div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about Destrouch Gel</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is Destrouch Gel safe to use around children and pets?</h3>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>While Destrouch Gel uses natural ingredients, we recommend keeping it out of reach of children and pets. Apply in areas that are not accessible to them, and always wash hands after handling the product.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How long does one tube of Destrouch Gel last?</h3>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>One tube of Destrouch Gel contains enough product to treat an average-sized home (approximately 1,500 sq ft). The gel remains effective for up to 3 months after application.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How quickly will I see results?</h3>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most customers report seeing a significant reduction in cockroach activity within 24-48 hours. Complete elimination typically occurs within 1-2 weeks, depending on the severity of the infestation.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I use Destrouch Gel in food preparation areas?</h3>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, Destrouch Gel can be used in food preparation areas, but should be applied in cracks, crevices, and areas not directly in contact with food. Always ensure proper cleaning of surfaces before food preparation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="order" id="order">
+        <div class="container order-container">
+            <div class="order-content">
+                <h2>Get Your Destrouch Gel Today</h2>
+                <p>Experience professional-grade cockroach elimination with our specially formulated gel. Order now and say goodbye to cockroach problems for good.</p>
+                <div class="price-tag"><span>$</span>19.99</div>
+                <div class="guarantee">
+                    <div class="guarantee-icon">✓</div>
+                    <p class="guarantee-text">100% Satisfaction Guarantee. If you're not completely satisfied with the results, we offer a 30-day money-back guarantee.</p>
+                </div>
+            </div>
+            <div class="order-form">
+                <h3 class="form-title">Place Your Order</h3>
+                <form id="order-form">
+                    <div class="form-group">
+                        <label class="form-label" for="fullName">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="phone">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="address">Shipping Address</label>
+                        <textarea class="form-control" id="address" rows="3" placeholder="Enter your complete shipping address" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="quantity">Quantity</label>
+                        <input type="number" class="form-control" id="quantity" min="1" value="1" required>
+                    </div>
+                    <button type="submit" class="btn btn-block">Complete Order</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-about">
+                <a href="#" class="footer-logo">DESTROUCH</a>
+                <p class="footer-text">Professional-grade cockroach elimination solution that's safe, effective, and easy to use.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link">f</a>
+                    <a href="#" class="social-link">t</a>
+                    <a href="#" class="social-link">in</a>
+                    <a href="#" class="social-link">ig</a>
+                </div>
+            </div>
+            <div class="footer-links-column">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="#">Home</a></li>
+                    <li class="footer-link"><a href="#features">Features</a></li>
+                    <li class="footer-link"><a href="#specs">Specifications</a></li>
+                    <li class="footer-link"><a href="#testimonials">Testimonials</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-column">
+                <h3 class="footer-title">Support</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="#">FAQ</a></li>
+                    <li class="footer-link"><a href="#">Shipping Policy</a></li>
+                    <li class="footer-link"><a href="#">Return Policy</a></li>
+                    <li class="footer-link"><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-column">
+                <h3 class="footer-title">Contact</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="mailto:info@destrouch.com">info@destrouch.com</a></li>
+                    <li class="footer-link"><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                    <li class="footer-link"><a href="#">Contact Form</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>&copy; 2025 Destrouch Gel. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 
     <script>
-        // Simple order handling
-        document.querySelector('.cta-button').addEventListener('click', () => {
-            const phone = '0560200090';
-            const confirmOrder = confirm(`Call ${phone} to complete your order?`);
-            if(confirmOrder) window.location.href = `tel:${phone}`;
+        // Mobile Navigation Toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        navToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                navMenu.classList.remove('active');
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all FAQ items
+                faqItems.forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
+                
+                // If the clicked item wasn't active, make it active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Form Submission
+        document.getElementById('order-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simple form validation
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const quantity = document.getElementById('quantity').value;
+            
+            if (!fullName || !email || !quantity) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Show success message
+            alert('Thank you for your order! We will process it immediately and contact you soon.');
+            this.reset();
         });
     </script>
 </body>
