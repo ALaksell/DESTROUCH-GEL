@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destrouch Gel - Cockroach Killer</title>
+    <style>
+        :root {
+            --primary-red: #C8102E;
+            --pure-white: #FFFFFF;
+            --deep-black: #000000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background-color: var(--pure-white);
+            color: var(--deep-black);
+        }
+
+        .header {
+            background-color: var(--primary-red);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .brand-title {
+            color: var(--pure-white);
+            font-size: 2rem;
+            letter-spacing: 2px;
+        }
+
+        .product-hero {
+            max-width: 1200px;
+            margin: 2rem auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .product-image {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .product-info {
+            padding: 1rem;
+        }
+
+        .product-info h2 {
+            color: var(--primary-red);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-info p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .technical-specs {
+            background-color: #f8f8f8;
+            padding: 2rem;
+            margin-top: 2rem;
+            border-radius: 8px;
+        }
+
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .spec-item h3 {
+            color: var(--primary-red);
+            margin-bottom: 0.5rem;
+        }
+
+        .order-section {
+            background-color: var(--deep-black);
+            color: var(--pure-white);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .price-tag {
+            font-size: 2.5rem;
+            color: var(--primary-red);
+            margin: 1rem 0;
+        }
+
+        .cta-button {
+            background-color: var(--primary-red);
+            color: var(--pure-white);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .product-hero {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="brand-title">DESTROUCH GEL</h1>
+    </header>
+
+    <main>
+        <section class="product-hero">
+            <img src="destrouch-gel.jpg" alt="Destrouch Gel - Cockroach Killer" class="product-image">
+            <div class="product-info">
+                <h2>Professional Cockroach Killer Gel</h2>
+                <p>Destrouch Gel is a highly effective insecticide designed to eradicate all species of cockroaches. Its natural formula ensures long-lasting results without harmful chemicals.</p>
+                <div class="price-tag">$19.99</div>
+                <button class="cta-button">Order Now</button>
+            </div>
+        </section>
+
+        <section class="technical-specs">
+            <h2>Technical Specifications</h2>
+            <div class="spec-grid">
+                <div class="spec-item">
+                    <h3>Composition</h3>
+                    <ul>
+                        <li><strong>Aspect & Color:</strong> Brown Gel</li>
+                        <li><strong>Active Ingredient:</strong> Oleandrine (Laurier-Rose)</li>
+                        <li><strong>Attractants:</strong> Eggs, Sugar</li>
+                        <li><strong>Base:</strong> Water</li>
+                    </ul>
+                </div>
+                <div class="spec-item">
+                    <h3>Usage Instructions</h3>
+                    <ol>
+                        <li>Remove the cap carefully.</li>
+                        <li>Apply small drops (approx. 3mm diameter) to affected areas.</li>
+                        <li>Close the cap after each use.</li>
+                    </ol>
+                </div>
+                <div class="spec-item">
+                    <h3>Precautions</h3>
+                    <ul>
+                        <li>Keep out of reach of children and pets.</li>
+                        <li>Wash hands thoroughly after use.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="order-section">
+            <h2>Place Your Order</h2>
+            <form id="order-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="number" placeholder="Quantity" min="1" required>
+                <button type="submit" class="cta-button">Place Order</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        // JavaScript for form submission
+        document.getElementById('order-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for your order! We will contact you shortly.');
+        });
+    </script>
+</body>
+</html>

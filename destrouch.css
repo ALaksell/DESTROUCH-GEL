@@ -1,0 +1,40 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+    transition: all 0.3s;
+}
+
+body[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+}
+
+.lang-switcher {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.lang-switcher button {
+    background: #c00;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    margin: 0 2px;
+    cursor: pointer;
+}
+
+/* Keep other CSS styles from previous version */
+/* Add RTL-specific adjustments */
+body[dir="rtl"] .product-details {
+    padding-right: 20px;
+    padding-left: 0;
+}
+
+body[dir="rtl"] .application-areas div {
+    text-align: right;
+}
