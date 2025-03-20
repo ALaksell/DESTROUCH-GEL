@@ -1011,7 +1011,29 @@
     </footer>
 
     <script>
-        // Mobile Navigation Toggle
+    
+    document.getElementById('order-form').addEventListener('submit', async function(event) {
+    event.preventDefault(); 
+
+    const orderData = {
+        fullName: document.getElementById('fullName').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        address: document.getElementById('address').value,
+        quantity: document.getElementById('quantity').value
+    };
+
+    const response = await fetch('/api/order', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(orderData)
+    });
+
+    const result = await response.json();
+    alert(result.message || result.error);
+});
+
+
         const navToggle = document.getElementById('navToggle');
         const navMenu = document.getElementById('navMenu');
 

@@ -1,59 +1,49 @@
-const { createServer } = require('node:http');
+const express = require('express');
 const sql = require('mssql');
+const path = require('path');
 
-const hostname = '127.0.0.1';
-const port = 3000;
+const app = express();
+const PORT = 3000;
 
-// Database configuration
-const config = {
-  server: 'db15879.databaseasp.net',
-  database: 'db15879',
-  user: 'db15879',
-  password: '7p=RZ!3owG@6',
-  options: {
-    encrypt: false, // Disable encryption as per your connection string
-    trustServerCertificate: true, // Needed if you're not using a valid certificate
-    enableArithAbort: true
-  },
-  connectionTimeout: 30000,
-  pool: {
-    max: 10,
-    min: 0,
-    idleTimeoutMillis: 30000
-  }
-};
+const connectionString = "Server=localhost,1433;Database=database;User Id=username;Password=password;Encrypt=true;TrustServerCertificate=true";
 
-// Create a connection pool
-const poolPromise = new sql.ConnectionPool(config)
-  .connect()
-  .then(pool => {
-    console.log('Connected to SQL Server');
-    return pool;
-  })
-  .catch(err => {
-    console.error('Database connection failed:', err);
-    process.exit(1);
-  });
+app.use(express.json()); 
+app.use(express.static('public')); 
 
-const server = createServer(async (req, res) => {
-  try {
-    const pool = await poolPromise;
-    const result = await pool.request().query('SELECT 1 AS testResult');
-    
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({
-      message: 'Hello World',
-      databaseTest: result.recordset
-    }));
-  } catch (err) {
-    console.error('Error:', err);
-    res.statusCode = 500;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Internal Server Error');
-  }
+// Connect to database and fetch data
+app.get('/api/data', async (req, res) => {
+    try {
+        await sql.connect(connectionString);
+        const result = await sql.query`SELECT * FROM cosutmers`;
+        res.json(result.recordset);
+    } catch (err) {
+        console.error('Database query failed:', err);
+        res.status(500).send('Error fetching data');
+    } finally {
+        await sql.close();
+    }
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+// Insert data into database
+app.post('/api/insert', async (req, res) => {
+    const { value1, value2 } = req.body;
+    try {
+        await sql.connect(connectionString);
+        await sql.query`INSERT INTO mytable (column1, column2) VALUES (${value1}, ${value2})`;
+        res.send('Data inserted successfully');
+    } catch (err) {
+        console.error('Insert failed:', err);
+        res.status(500).send('Error inserting data');
+    } finally {
+        await sql.close();
+    }
+});
+
+// Serve HTML file
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+app.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}`);
 });
