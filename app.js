@@ -24,6 +24,23 @@ const test = async () => {
 };
 
 
+const getOrders = async () => {
+    try {
+        
+        pool = await sql.connect(connectionString); 
+        const result = await pool.request().query('SELECT * FROM customers');
+        return result.recordset; 
+        
+    } catch (err) {
+        console.error('Error fetching orders:', err);
+        throw err;
+    } finally {
+        await sql.close();
+    }
+};
+
+
+
 app.post('/api/order', async (req, res) => {
     const { fullName, email, phone, address, quantity } = req.body;
 
@@ -42,7 +59,21 @@ app.post('/api/order', async (req, res) => {
     }
 });
 
-app.listen(PORT,async () => {
-  console.log(`Server running at http://localhost:${PORT}`);
-  test();
+
+
+
+app.listen(PORT, async () => {
+    console.log(`Server running at http://localhost:${PORT}`);
+    //test();
+    await getOrders();
+    try {
+        const orders = await getOrders(); 
+        console.log('Orders fetched at server start:', orders);
+    } catch (err) {
+        console.error('Error fetching orders at server start:', err);
+    }
+    
+    
 });
+
+
