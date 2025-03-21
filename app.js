@@ -1,8 +1,9 @@
 require('dotenv').config();
 const express = require('express');
 const sql = require('mssql');
-const cors = require('cors');
-
+app.use(cors({
+    origin: 'https://destrouch-gel.vercel.app/'
+}));
 
 const app = express();
 const PORT = 3000;
