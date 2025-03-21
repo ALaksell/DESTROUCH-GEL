@@ -26,7 +26,7 @@ const test = async () => {
 
 const getOrders = async () => {
     try {
-        
+
         pool = await sql.connect(connectionString); 
         const result = await pool.request().query('SELECT * FROM customers');
         return result.recordset; 
@@ -42,13 +42,14 @@ const getOrders = async () => {
 
 
 app.post('/api/order', async (req, res) => {
-    const { fullName, email, phone, address, quantity } = req.body;
+    const { nom,prenom, quantity, phone_number,wilaya, address } = req.body;
 
+    console.log('zbi',nom,prenom, quantity, phone_number,wilaya, address);
     try {
         await sql.connect(connectionString);
         await sql.query`
-            INSERT INTO orders (full_name, email, phone, address, quantity)
-            VALUES (${fullName}, ${email}, ${phone}, ${address}, ${quantity})
+            INSERT INTO customers (nom, prenom,quantity, phone_number, wilaya , adresse )
+            VALUES (${nom},${prenom},${quantity}, ${phone_number},${wilaya}, ${address})
         `;
         res.json({ message: 'order added. well contact you' });
     } catch (err) {
@@ -59,7 +60,24 @@ app.post('/api/order', async (req, res) => {
     }
 });
 
+/*
+SELECT TOP (1000) [cle]
+      ,[nom]
+      ,[prenom]
+      ,[quantity]
+      ,[phone_number]
+      ,[wilaya]
+      ,[adresse]
+      ,[isConfirmed]
+  FROM [db15879].[dbo].[customers]
 
+
+
+
+
+
+
+*/ 
 
 
 app.listen(PORT, async () => {
