@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "start": "node api/index.js",
+    "server": "nodemon index.js",
+    "test" : "node test.js"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
