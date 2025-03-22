@@ -4,13 +4,13 @@ const cors = require('cors');
 
 const app = express();
 app.use(express.json());
-// app.use(cors({
-//     origin: 'https://destrouch-gel.vercel.app/'
-// }));
+app.use(cors({
+    origin: 'https://destrouch-gel.vercel.app/'
+}));
 
 const connectionString = process.env.DB_CONNECTION;
 
-app.post('/order', async (req, res) => {
+app.post('api/order', async (req, res) => {
     const { nom, prenom, quantity, phone_number, wilaya, address } = req.body;
 
     try {
@@ -28,7 +28,7 @@ app.post('/order', async (req, res) => {
     }
 });
 
-app.get('/orders', async (req, res) => {
+app.get('api/orders', async (req, res) => {
     try {
         await sql.connect(connectionString);
         const result = await sql.query('SELECT * FROM customers');
