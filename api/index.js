@@ -10,7 +10,7 @@ app.use(cors({
 
 const connectionString = process.env.DB_CONNECTION;
 
-app.post('api/order', async (req, res) => {
+app.post('/order', async (req, res) => {
     const { nom, prenom, quantity, phone_number, wilaya, address } = req.body;
 
     try {
@@ -28,7 +28,7 @@ app.post('api/order', async (req, res) => {
     }
 });
 
-app.get('api/orders', async (req, res) => {
+app.get('/orders', async (req, res) => {
     try {
         await sql.connect(connectionString);
         const result = await sql.query('SELECT * FROM customers');

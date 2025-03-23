@@ -282,6 +282,14 @@
             font-size: 2.5rem;
             color: var(--primary-red);
             margin-bottom: 20px;
+         
+        }
+
+        .feature-icon  img{
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+
         }
 
         .feature-title {
@@ -302,20 +310,30 @@
         }
 
         .specs-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
+            display: flex;
+            flex-direction: column; 
+            width: 100%;
+            gap: 100px;
+            padding-top: 15px;
+            align-items: start;
+            justify-content: center;
         }
 
         .specs-content h2 {
             font-size: 2.2rem;
             margin-bottom: 30px;
+           
+           
+           
             color: var(--deep-black);
         }
 
         .specs-list {
             margin-bottom: 30px;
+            width: 100%;
+            gap: 20px;
+            flex-direction: column;
+            display: fe;
         }
 
         .spec-item {
@@ -751,7 +769,9 @@
             }
 
             .features-grid {
-                grid-template-columns: 1fr;
+                flex-wrap: wrap;
+                display: flex;
+            
             }
 
             .hero-content h1 {
@@ -866,7 +886,12 @@
             </div>
         </div>
     </section>
-    
+
+
+    <!-- 
+
+https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png
+ -->
 
     <section class="features" id="features">
         <div class="container">
@@ -879,27 +904,32 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <img style="width: 100px;height: auto;" src="https://i.ibb.co/4nv5SFzV/png-transparent-man-recycling-trash-blue-paper-guy-can-litter-rubbish-garbage-thumbnail.png"/>
+                        <img  src="https://i.ibb.co/KxfKx8wS/kids-icon-7.png"/>
                     </div>    
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <img style="width:100px;height: auto;" src="https://i.ibb.co/CpP4C8Hv/no-kids.png"/>
+                        <img  src="https://i.ibb.co/BKtsGTyJ/483e8ef7f027ab5d6804f1fd68a19820-removebg-preview.png"/>
                     </div>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <img style="width: 100px;height: auto;" src="https://i.ibb.co/WW8RhqmD/ppe-hand-gloves-blue-round-icon-704081694792206o375ayzq1k.png"/>
+                        <img src="https://i.ibb.co/xK1d6TpF/c810998a5026753db2dd482b8206fc5c-removebg-preview.png"/>
                     </div>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <img style="width:100px;height: auto;" src="https://i.ibb.co/LdPJm2KV/44077-AF-WEB-600.png"/>
+                        <img  src="https://i.ibb.co/Z1vB523M/cee5096705d63d0e68689bc1e2284557-removebg-preview.png"/>
                     </div>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <img style="width:100px;height: auto;" src="https://i.ibb.co/GY4ywBD/3182561.png"/>
+                        <img  src="https://i.ibb.co/WvG2K7p4/Whats-App-Image-2025-03-23-at-00-08-43-290334b8-removebg-preview.pngno"/>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img  src="https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png"/>
                     </div>
                 </div>
             </div>
@@ -911,7 +941,7 @@
             <div class="specs-content">
                 <h2 data-lang="specs_title">Technical Specifications</h2>
                 <div class="specs-list">
-                    <div class="spec-item">
+                    <!-- <div class="spec-item">
                         <h3 class="spec-title" data-lang="specs_composition">Composition</h3>
                         <ul class="spec-details">
                             <li><strong data-lang="specs_aspect">Aspect & Color:</strong> <span data-lang="specs_brown_gel">Brown Gel</span></li>
@@ -919,15 +949,53 @@
                             <li><strong data-lang="specs_attractants">Attractants:</strong> <span data-lang="specs_eggs_sugar">Eggs, Sugar</span></li>
                             <li><strong data-lang="specs_base">Base:</strong> <span data-lang="specs_water">Water</span></li>
                         </ul>
-                    </div>
+                    </div> -->
+                    
                     <div class="spec-item">
-                        <h3 class="spec-title" data-lang="specs_usage">Usage Instructions</h3>
-                        <ol class="spec-details">
-                            <li data-lang="specs_step1">Remove the cap carefully.</li>
-                            <li data-lang="specs_step2">Apply small drops (approx. 3mm diameter) to affected areas.</li>
-                            <li data-lang="specs_step3">Close the cap after each use.</li>
-                            <li data-lang="specs_step4">Use the product within 6 months of opening.</li>
-                        </ol>
+                     <h3 class="spec-title" data-lang="specs_usage">Composition</h3>
+                    <table>
+                        <table border="1" style="border-collapse: collapse; width: 100%; text-align: center; font-family: Arial, sans-serif;">
+                            <thead>
+                                <tr style="background-color: #f2f2f2;">
+                                    <th data-lang="specs_feature" style="padding: 10px;">Aspect</th>
+                                    <th data-lang="specs_description" style="padding: 10px;">Description</th>
+                                    <th style="padding: 10px;">طبيعة المنتج</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 8px;">matiere actif</td>
+                                    <td style="padding: 8px;">0.13%</td>
+                                    <td style="padding: 8px;">المادة الفعالة</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 8px;">extrait Sec</td>
+                                    <td style="padding: 8px;">75%</td>
+                                    <td style="padding: 8px;">المادة الفعالة</td>
+                                </tr>  
+                            </tbody>
+                        </table>
+                    </div>
+                        
+                    <div class="spec-item">
+
+                        <div style="flex-direction: row;display:inline-flex;justify-content: center;justify-items: center; width: 100%;">
+                            <div style="width: 50%;">
+                                <h3 class="spec-title" data-lang="specs_usage">Usage Instructions</h3>
+                                <ol class="spec-details">
+                                    <li data-lang="specs_step1">Remove the cap carefully.</li>
+                                    <li data-lang="specs_step2">Apply small drops (approx. 3mm diameter) to affected areas.</li>
+                                    <li data-lang="specs_step3">Close the cap after each use.</li>
+                                    <li data-lang="specs_step4">Use the product within 6 months of opening.</li>
+                                </ol>
+                            </div>
+                            <div style="width: 50%;">
+                                <div class="specs-image">
+                                    <img src="https://i.ibb.co/DHwX9RSb/3tchkat.jpg" alt="Destrouch Gel Application" />
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                     <div class="spec-item">
                         <h3 class="spec-title" data-lang="specs_precautions">Precautions</h3>
@@ -939,9 +1007,7 @@
                     </div>
                 </div>
             </div>
-            <div class="specs-image">
-                <img src="https://i.ibb.co/DHwX9RSb/3tchkat.jpg" alt="Destrouch Gel Application" />
-            </div>
+           
         </div>
     </section>
     
@@ -1078,7 +1144,6 @@
     </footer>
 
     <script>
-    
     document.getElementById('order-form').addEventListener('submit', async function(event) {
     event.preventDefault(); 
 
@@ -1091,15 +1156,24 @@
         quantity: document.getElementById('quantity').value
     };
 
-    const response = await fetch('/api/order', {
+    const response = await fetch('/order', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(orderData)
     });
+    console.log(response);      
 
     const result = await response.json();
     alert(result.message || result.error);
 });
+
+
+    </script>       
+    <script>
+    
+ 
+
+
 
 
         const navToggle = document.getElementById('navToggle');

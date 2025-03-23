@@ -39,7 +39,7 @@ const getOrders = async () => {
 
 
 
-app.post('/api/order', async (req, res) => {
+app.post('/order', async (req, res) => {
     const { nom,prenom, quantity, phone_number,wilaya, address } = req.body;
 
     console.log('zbi',nom,prenom, quantity, phone_number,wilaya, address);
