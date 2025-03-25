@@ -192,7 +192,45 @@
             width: 100%;
            
         }
-
+        .select-container {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #333;
+    }
+    
+    select {
+      width: 100%;
+      padding: 10px 14px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      color: #333;
+    }
+    
+    select:hover {
+      border-color: #999;
+    }
+    
+    select:focus {
+      outline: none;
+      border-color: #4a90e2;
+      box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+    }
+    
+    option {
+      padding: 8px;
+    }
       
 
         .badge {
@@ -1089,8 +1127,71 @@ https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="wilaya" data-lang="order_region">Wilaya (Region)</label>
-                        <input type="text" class="form-control" id="wilaya"  required>
-                    </div>
+                        <!-- <input type="text" class="form-control" id="wilaya"  required> -->
+                        <div class="select-container">
+                            
+                            <select name="wilaya" id="wilaya" required>
+                              <option value="" disabled selected>Select a wilaya...</option>
+                              <option value="Adrar">1 - Adrar</option>
+                              <option value="Chlef">2 - Chlef</option>
+                              <option value="Laghouat">3 - Laghouat</option>
+                              <option value="Oum El Bouaghi">4 - Oum El Bouaghi</option>
+                              <option value="Batna">5 - Batna</option>
+                              <option value="Béjaïa">6 - Béjaïa</option>
+                              <option value="Biskra">7 - Biskra</option>
+                              <option value="Béchar">8 - Béchar</option>
+                              <option value="Blida">9 - Blida</option>
+                              <option value="Bouira">10 - Bouira</option>
+                              <option value="Tamanrasset">11 - Tamanrasset</option>
+                              <option value="Tébessa">12 - Tébessa</option>
+                              <option value="Tlemcen">13 - Tlemcen</option>
+                              <option value="Tiaret">14 - Tiaret</option>
+                              <option value="Tizi Ouzou">15 - Tizi Ouzou</option>
+                              <option value="Alger">16 - Alger (Algiers)</option>
+                              <option value="Djelfa">17 - Djelfa</option>
+                              <option value="Jijel">18 - Jijel</option>
+                              <option value="Sétif">19 - Sétif</option>
+                              <option value="Saïda">20 - Saïda</option>
+                              <option value="Skikda">21 - Skikda</option>
+                              <option value="Sidi Bel Abbès">22 - Sidi Bel Abbès</option>
+                              <option value="Annaba">23 - Annaba</option>
+                              <option value="Guelma">24 - Guelma</option>
+                              <option value="Constantine">25 - Constantine</option>
+                              <option value="Médéa">26 - Médéa</option>
+                              <option value="Mostaganem">27 - Mostaganem</option>
+                              <option value="M'Sila">28 - M'Sila</option>
+                              <option value="Mascara">29 - Mascara</option>
+                              <option value="Ouargla">30 - Ouargla</option>
+                              <option value="Oran">31 - Oran</option>
+                              <option value="El Bayadh">32 - El Bayadh</option>
+                              <option value="Illizi">33 - Illizi</option>
+                              <option value="Bordj Bou Arréridj">34 - Bordj Bou Arréridj</option>
+                              <option value="Boumerdès">35 - Boumerdès</option>
+                              <option value="El Tarf">36 - El Tarf</option>
+                              <option value="Tindouf">37 - Tindouf</option>
+                              <option value="Tissemsilt">38 - Tissemsilt</option>
+                              <option value="El Oued">39 - El Oued</option>
+                              <option value="Khenchela">40 - Khenchela</option>
+                              <option value="Souk Ahras">41 - Souk Ahras</option>
+                              <option value="Tipaza">42 - Tipaza</option>
+                              <option value="Mila">43 - Mila</option>
+                              <option value="Aïn Defla">44 - Aïn Defla</option>
+                              <option value="Naâma">45 - Naâma</option>
+                              <option value="Aïn Témouchent">46 - Aïn Témouchent</option>
+                              <option value="Ghardaïa">47 - Ghardaïa</option>
+                              <option value="Relizane">48 - Relizane</option>
+                              <option value="El M'Ghair">49 - El M'Ghair</option>
+                              <option value="El Menia">50 - El Menia</option>
+                              <option value="Ouled Djellal">51 - Ouled Djellal</option>
+                              <option value="Bordj Badji Mokhtar">52 - Bordj Badji Mokhtar</option>
+                              <option value="Béni Abbès">53 - Béni Abbès</option>
+                              <option value="Timimoun">54 - Timimoun</option>
+                              <option value="Touggourt">55 - Touggourt</option>
+                              <option value="Djanet">56 - Djanet</option>
+                              <option value="In Salah">57 - In Salah</option>
+                              <option value="In Guezzam">58 - In Guezzam</option>
+                            </select>
+                          </div>
                     <div class="form-group">
                         <label class="form-label" for="address" data-lang="order_address">Shipping Address</label>
                         <textarea class="form-control" id="address" rows="3"  required></textarea>
