@@ -622,7 +622,7 @@
         }
 
         .faq-item.active .faq-answer {
-            max-height: 200px;
+            max-height: 300px;
         }
 
         /* Footer */
@@ -996,7 +996,7 @@ https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png
                         
                     <div class="spec-item">
 
-                        <div style="flex-direction: row;display:inline-flex;justify-content: center;justify-items: center; width: 100%;">
+                        <div style="gap:10px;display:inline-flex;justify-content: center;justify-items: center; width: 100%;">
                             <div style="width: 50%;">
                                 <h3 class="spec-title" data-lang="specs_usage">Usage Instructions</h3>
                                 <ol class="spec-details">
@@ -1007,7 +1007,7 @@ https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png
                                     <li data-lang="specs_step4">Use the product within 6 months of opening.</li>
                                 </ol>
                             </div>
-                            <div style="width: 50%;">
+                            <div style="width: 50%;align-items: center;justify-content: center;display: flex;">
                                 <div class="specs-image">
                                     <img src="https://i.ibb.co/DHwX9RSb/3tchkat.jpg" alt="Destrouch Gel Application" />
                                 </div>
@@ -1029,7 +1029,347 @@ https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png
         </div>
     </section>
     
+    <style>
+             .application-section {
+            margin: 0 auto;
+            padding: 80px 20px;
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: white;
+            overflow: hidden;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.03);
+        }
 
+        .red-accent {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 120px;
+            height: 100%;
+            background: linear-gradient(135deg, #ff3a3a, #c20000);
+            z-index: 0;
+            transform: skewX(-12deg) translateX(60px);
+            box-shadow: -10px 0 30px rgba(194, 0, 0, 0.15);
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            width: 100%;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+        }
+
+        .zoneheader-container {
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .zoneheader {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff3a3a, #c20000);
+            color: white;
+            padding: 14px 40px;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(194, 0, 0, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .zoneheader::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transform: translateX(-100%);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .description {
+            font-size: 22px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 60px;
+            
+            max-width: 70%;
+            line-height: 1.5;
+        }
+
+        .product-name {
+            font-weight: 700;
+            color: #c20000;
+            position: relative;
+            display: inline-block;
+        }
+
+        .product-name::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #c20000;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        .product-name:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .icons-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px 40px;
+            width: 100%;
+            max-width: 1000px;
+            padding: 0 25px;
+        }
+
+        .icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            padding: 20px;
+            border-radius: 16px;
+        }
+
+
+        .icon {
+            height: 100px;
+            width: 100px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8f8f8;
+            border-radius: 50%;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .icon::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(135deg, rgba(255, 58, 58, 0.1), rgba(194, 0, 0, 0.05));
+            border-radius: 50%;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.4s ease;
+        }
+
+        .icon-item:hover .icon {
+            box-shadow: 0 15px 30px rgba(194, 0, 0, 0.15);
+        }
+
+        .icon-item:hover .icon::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .icon img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            transition: transform 0.4s ease;
+            filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
+        }
+
+        .icon-item:hover .icon img {
+            transform: scale(1.1);
+        }
+
+        .icon-label {
+            font-weight: 600;
+            font-size: 20px;
+            color: #333;
+            transition: all 0.3s ease;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .icon-label::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: #c20000;
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+
+        .icon-item:hover .icon-label {
+            color: #c20000;
+        }
+
+        .icon-item:hover .icon-label::after {
+            width: 40px;
+        }
+
+        @media (max-width: 900px) {
+            .icons-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 700px;
+                gap: 40px 30px;
+            }
+            
+            .description {
+                max-width: 85%;
+                font-size: 20px;
+            }
+            
+            .zoneheader {
+                font-size: 24px;
+                padding: 12px 30px;
+            }
+            
+            .red-accent {
+                width: 100px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .application-section {
+                padding: 60px 15px;
+            }
+            
+            .icons-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 320px;
+                gap: 30px;
+            }
+            
+            .description {
+                max-width: 100%;
+                font-size: 18px;
+                margin-bottom: 40px;
+            }
+            
+            .zoneheader {
+                font-size: 22px;
+                padding: 10px 25px;
+            }
+            
+            .red-accent {
+                width: 80px;
+                transform: skewX(-12deg) translateX(40px);
+            }
+            
+            .icon {
+                height: 70px;
+                width: 70px;
+            }
+        }
+    </style>
+
+
+
+
+<!-- 
+
+
+
+
+
+
+
+
+
+
+
+-->
+
+
+
+
+<section class="application-section">
+    <div class="red-accent"></div>
+    <div class="content-wrapper">
+        <div class="zoneheader-container">
+            <h2 class="zoneheader" data-lang="zone_title">Application zone</h2>
+        </div>
+
+        <div class="icons-grid">
+            <div class="icon-item">
+                <div class="icon">
+                    <img src="https://i.ibb.co/WvTT0J4n/Picsart-25-03-23-00-13-42-157.png" alt="Maisons icon">
+                </div>
+                <div class="icon-label" data-lang="zone_label1">Maisons</div>
+            </div>
+            
+            <div class="icon-item">
+                <div class="icon">
+                    <img src="https://i.ibb.co/PvWPC088/Picsart-25-03-23-00-14-24-427.png" alt="Bâtiment icon">
+                </div>
+                <div class="icon-label" data-lang="zone_label2">Bâtiment</div>
+            </div>
+            
+            <div class="icon-item">
+                <div class="icon">
+                    <img src="https://i.ibb.co/F480WwQh/Picsart-25-03-23-00-15-00-492.png" alt="Hôtels icon">
+                </div>
+                <div class="icon-label" data-lang="zone_label3">Hôtels</div>
+            </div>
+            
+            <div class="icon-item">
+                <div class="icon">
+                    <img src="https://i.ibb.co/hF5ybnH8/Picsart-25-03-23-00-14-41-629.png" alt="Bureaux icon">
+                </div>
+                <div class="icon-label"   data-lang="zone_label4">Bureaux</div>
+            </div>
+            
+            <div class="icon-item">
+                <div class="icon">
+                    <img src="https://i.ibb.co/SwBdRJ8M/6e97eecc-b582-45c8-8f63-30d2452e1d12-removalai-preview-1.png" alt="Entrepôts icon">
+                </div>
+                <div class="icon-label"  data-lang="zone_label4">Entrepôts</div>
+            </div>
+            
+            <div class="icon-item">
+                <div class="icon">
+                    <img src="https://i.ibb.co/BVLqSPZC/Picsart-25-03-23-00-12-51-753.png" alt="Usines icon">
+                </div>
+                <div class="icon-label"  data-lang="zone_label5">Usines</div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
     <section class="faq" id="faq">
@@ -1061,6 +1401,30 @@ https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png
                         </p>
                     </div>
                 </div>
+              <div class="faq-item">
+    <div class="faq-question">
+        <h3 data-lang="faq_q3">where can you use our products?</h3>
+        <span>+</span>
+    </div>
+    <div class="faq-answer">
+        <div style="padding-bottom: 15px;">
+            <p data-lang="faq_a3" style="font-size: 14px; color: #555;">
+                DESTROUCH GEL is effective everywhere cockroaches hide, including:
+            </p>
+            <ol style="font-size: 14px; color: #555; margin-left: 20px;">
+                <li>Homes</li>
+                <li>Apartment buildings</li>
+                <li>Hotels</li>
+                <li>Offices</li>
+                <li>Warehouses</li>
+                <li>Factories</li>
+            </ol>
+
+        </div>
+       
+    </div>
+</div>
+
             </div>
         </div>
     </section>
