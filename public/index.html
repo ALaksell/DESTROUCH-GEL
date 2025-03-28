@@ -13,6 +13,7 @@
             --off-white: #F9F9F9;
             --light-gray: #EEEEEE;
             --medium-gray: #888888;
+            overflow-x: hidden;
             --deep-black: #222222;
             --shadow: 0 10px 30px rgba(0,0,0,0.08);
             --transition: all 0.3s ease;
@@ -28,6 +29,8 @@
             font-family: 'Open Sans', sans-serif;
             color: var(--deep-black);
             line-height: 1.6;
+            overflow-x: hidden;
+
             background-color: var(--off-white);
         }
 
@@ -51,12 +54,12 @@
             z-index: 100;
         }
         .language-switch {
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-    position: relative;
-    z-index: 101;
-}
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+            position: relative;
+            z-index: 101;
+        }
 
 .lang-btn {
     background: none;
@@ -81,7 +84,7 @@
     box-shadow: 0 2px 8px rgba(233, 30, 99, 0.3);
 }
 
-/* Updated Header Container */
+
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -106,6 +109,7 @@
             font-size: 1.8rem;
             letter-spacing: 1px;
             font-weight: 700;
+            white-space: nowrap;
         }
 
         .nav-toggle {
@@ -116,6 +120,7 @@
             cursor: pointer;
             color: var(--deep-black);
         }
+
 
         .nav-menu {
             display: flex;
@@ -161,10 +166,12 @@
         }
 
         .hero-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            display: flex;
+            justify-content: center;
             align-items: center;
+            min-height: 80vh;
+            gap: 60px;
+            flex-direction: row;
         }
 
         .hero-content h1 {
@@ -184,6 +191,11 @@
             margin-bottom: 30px;
         }
 
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--medium-gray);
+            margin-bottom: 30px;
+        }
         .hero-image {
             position: relative;
         }
@@ -410,39 +422,6 @@
 
    
 
-       
-        .testimonial-card {
-            background-color: var(--off-white);
-            border-radius: 15px;
-            padding: 40px;
-            margin-bottom: 30px;
-            box-shadow: var(--shadow);
-            position: relative;
-        }
-
-        .testimonial-card:last-child {
-            margin-bottom: 0;
-        }
-
-        .testimonial-text {
-            font-size: 1.1rem;
-            font-style: italic;
-            margin-bottom: 20px;
-            color: var(--deep-black);
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-        }
-
-        .author-image {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            margin-right: 15px;
-            object-fit: cover;
-        }
 
         .author-info h4 {
             font-size: 1.1rem;
@@ -754,9 +733,7 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .hero-image {
-                order: -1;
-            }
+
 
             .badge {
                 width: 80px;
@@ -770,11 +747,30 @@
             }
         }
 
+
         @media (max-width: 768px) {
             .nav-toggle {
                 display: block;
             }
 
+            .hero-container {
+
+                flex-direction: column;
+
+            }
+
+            .hero-content{
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+            }
+
+            .brand-title{
+                font-size: 1rem;
+            }
             .nav-menu {
                 position: fixed;
                 top: 70px;
@@ -807,11 +803,7 @@
             .hero-content h1 {
                 font-size: 2.2rem;
             }
-            .hero-content  {
-                background-image:url("https://i.ibb.co/N6CtXWVQ/dd.png");
-       background-repeat: no-repeat, no-repeat;
-       background-position: right, left;
-            }
+
            
             
  
@@ -834,11 +826,7 @@
         padding: 10px 15px;
     }
     
-    .language-switch {
-        position: absolute;
-        top: 15px;
-        right: 60px;
-    }
+
     
     .lang-btn {
         padding: 4px 8px;
@@ -846,7 +834,13 @@
     }
 }
 
-/* RTL Support for Arabic */
+        @media (max-width: 390px) {
+
+            .brand-title {
+                font-size: 0.75rem;
+            }
+        }
+
 [dir="rtl"] .nav-item {
     margin-left: 0;
     margin-right: 30px;
@@ -857,12 +851,9 @@
     right: 0;
 }
 
-[dir="rtl"] .language-switch {
-    margin-left: 0;
-    margin-right: 20px;
-}
 
-/* For the full header layout when in RTL mode */
+
+
 [dir="rtl"] .header-container {
     flex-direction: row-reverse;
 }
@@ -871,19 +862,14 @@
     flex-direction: row-reverse;
 }
 
-/* For mobile menu in RTL mode */
-@media (max-width: 768px) {
-    [dir="rtl"] .language-switch {
-        right: auto;
-        left: 60px;
-    }
-}
-        
+
+
     </style>
 </head>
 <body>
     <header class="header">
         <div class="container header-container">
+
             <div class="brand">
                 <h1 class="brand-title">DESTROUCH GEL</h1>
             </div>
@@ -897,17 +883,16 @@
                     <li class="nav-item"><a href="#" class="nav-link" data-lang="home">Home</a></li>
                     <li class="nav-item"><a href="#features" class="nav-link" data-lang="features">Features</a></li>
                     <li class="nav-item"><a href="#specs" class="nav-link" data-lang="specs">Specifications</a></li>
-                    
                     <li class="nav-item"><a href="#order" class="nav-link" data-lang="order">Order Now</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    
+
     <section class="hero">
         <div class="container hero-container">
             <div class="hero-content">
-                
+                <div class="hero-bg"></div>
                 <h1 data-lang="hero_title">Professional <span>Cockroach Killer</span> Gel Solution</h1>
                 <p data-lang="hero_desc">
                     Destrouch Gel is a highly effective insecticide designed to eradicate all species of cockroaches. Its natural formula ensures long-lasting results without harmful chemicals.
@@ -923,6 +908,9 @@
             </div>
         </div>
     </section>
+
+
+
 
 
     <!-- 
@@ -978,15 +966,7 @@ https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png
             <div class="specs-content">
                 <h2 data-lang="specs_title">Technical Specifications</h2>
                 <div class="specs-list">
-                    <!-- <div class="spec-item">
-                        <h3 class="spec-title" data-lang="specs_composition">Composition</h3>
-                        <ul class="spec-details">
-                            <li><strong data-lang="specs_aspect">Aspect & Color:</strong> <span data-lang="specs_brown_gel">Brown Gel</span></li>
-                            <li><strong data-lang="specs_active">Active Ingredient:</strong> <span data-lang="specs_oleandrine">Oleandrine (Laurier-Rose)</span></li>
-                            <li><strong data-lang="specs_attractants">Attractants:</strong> <span data-lang="specs_eggs_sugar">Eggs, Sugar</span></li>
-                            <li><strong data-lang="specs_base">Base:</strong> <span data-lang="specs_water">Water</span></li>
-                        </ul>
-                    </div> -->
+
                     
                     <div class="spec-item">
                      <h3 class="spec-title" data-lang="specs_usage">Composition</h3>
