@@ -201,7 +201,8 @@
         }
 
         .product-image {
-            width: 100%;
+            width: 65vh;
+            height: auto;
            
         }
         .select-container {
@@ -356,7 +357,8 @@
         /* Specs Section */
         .specs {
             padding: 80px 0;
-            background-color: var(--off-white);
+           
+            background-color: white;
         }
 
         .specs-container {
@@ -407,8 +409,11 @@
 
         .spec-details {
             padding-left: 25px;
+         
         }
 
+
+         
         .spec-details li {
             margin-bottom: 8px;
             color: var(--medium-gray);
@@ -752,6 +757,8 @@
             .nav-toggle {
                 display: block;
             }
+            
+          
 
             .hero-container {
 
@@ -822,9 +829,9 @@
             }
         }
         @media (max-width: 768px) {
-    .header-container {
-        padding: 10px 15px;
-    }
+         .header-container {
+         padding: 10px 15px;
+         }
     
 
     
@@ -840,6 +847,7 @@
                 font-size: 0.75rem;
             }
         }
+
 
 [dir="rtl"] .nav-item {
     margin-left: 0;
@@ -901,7 +909,7 @@
                 <a href="#order" class="btn" data-lang="order_now">Order Now</a>
             </div>
             <div class="hero-image">
-                <img src="https://i.ibb.co/RGYwQpMJ/tchka-dwa-removebg-preview-1.png" alt="Destrouch Gel - Cockroach Killer" class="product-image">
+                <img src="https://i.ibb.co/NDmY4dC/Picsart-25-03-29-16-44-50-743.png" alt="Destrouch Gel - Cockroach Killer" class="product-image">
                 <div class="badge">
                     <div class="badge-text" data-lang="badge_only">Only</div>
                     <div class="badge-value">690DA</div>
@@ -945,10 +953,11 @@ https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png
                         
                     <div class="spec-item">
 
-                        <div style="gap:10px;display:inline-flex;justify-content: center;justify-items: center; width: 100%;">
-                            <div style="width: 50%;">
-                                <h3 class="spec-title" data-lang="specs_usage">Usage Instructions</h3>
-                                <ol class="spec-details">
+                        <div style="gap:10px;display:inline-flex;justify-content: center;justify-items: center; width: 100%;flex-direction: column;">
+                            <h3 class="spec-title" data-lang="specs_usage">Usage Instructions</h3>
+                            <div class="usageIn2nd">
+                            <div  class="spec-details-parent">
+                               <ol class="spec-details">
                                     <li data-lang="specs_step1">Remove the lid with caution .</li>
                                     <li data-lang="specs_step2">Apply small drops (approximately. 3mm diameter) on the effected areas. 
                                         The number of droplets depends on the severity of the insect infection.</li>
@@ -956,120 +965,123 @@ https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png
                                     <li data-lang="specs_step4">Use the product within 6 months of opening.</li>
                                 </ol>
                             </div>
-                            <div style="width: 50%;align-items: center;justify-content: center;display: flex;">
+                            <div class="spec-details-img">
                                 <div class="specs-image">
                                     <img src="https://i.ibb.co/DHwX9RSb/3tchkat.jpg" alt="Destrouch Gel Application" />
                                 </div>
                             </div>
+                          </div>
+                           
                         </div>
                         
                     </div>
-
-                    <section class="application-section">
-                        <div class="red-accent"></div>
-                        <div class="content-wrapper">
-                            <div class="zoneheader-container">
-                                <h2 class="zoneheader" data-lang="zone_title">Application zone</h2>
-                            </div>
-                    
-                            <div class="icons-grid">
-                                <div class="icon-item">
-                                    <div class="icon">
-                                        <img src="https://i.ibb.co/WvTT0J4n/Picsart-25-03-23-00-13-42-157.png" alt="Maisons icon">
-                                    </div>
-                                    <div class="icon-label" data-lang="zone_label1">Warehouses</div>
-                                </div>
-                                
-                                <div class="icon-item">
-                                    <div class="icon">
-                                        <img src="https://i.ibb.co/PvWPC088/Picsart-25-03-23-00-14-24-427.png" alt="Bâtiment icon">
-                                    </div>
-                                    <div class="icon-label" data-lang="zone_label2">buildings</div>
-                                </div>
-                                
-                                <div class="icon-item">
-                                    <div class="icon">
-                                        <img src="https://i.ibb.co/F480WwQh/Picsart-25-03-23-00-15-00-492.png" alt="Hôtels icon">
-                                    </div>
-                                    <div class="icon-label" data-lang="zone_label3">Offices</div>
-                                </div>
-                                
-                                <div class="icon-item">
-                                    <div class="icon">
-                                        <img src="https://i.ibb.co/hF5ybnH8/Picsart-25-03-23-00-14-41-629.png" alt="Bureaux icon">
-                                    </div>
-                                    <div class="icon-label"   data-lang="zone_label4">Houses</div>
-                                </div>
-                                
-                                <div class="icon-item">
-                                    <div class="icon">
-                                        <img src="https://i.ibb.co/SwBdRJ8M/6e97eecc-b582-45c8-8f63-30d2452e1d12-removalai-preview-1.png" alt="Entrepôts icon">
-                                    </div>
-                                    <div class="icon-label"  data-lang="zone_label4">Factory</div>
-                                </div>
-                                
-                                <div class="icon-item">
-                                    <div class="icon">
-                                        <img src="https://i.ibb.co/BVLqSPZC/Picsart-25-03-23-00-12-51-753.png" alt="Usines icon">
-                                    </div>
-                                    <div class="icon-label"  data-lang="zone_label5">Usines</div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="features" id="features">
-                        <div class="container">
-                            <div class="section-title">
-                                <h2 data-lang="features_title">Precautions for use</h2>
-                                <p data-lang="features_desc">
-                                    For safety reasons, do not apply to areas accessible to children and pets. Wash your hands after each use.
-                                </p>
-                            </div>
-                            <div class="features-grid">
-                                <div class="feature-card">
-                                    <div class="feature-icon">
-                                        <img  src="https://i.ibb.co/KxfKx8wS/kids-icon-7.png"/>
-                                    </div>    
-                                </div>
-                                <div class="feature-card">
-                                    <div class="feature-icon">
-                                        <img  src="https://i.ibb.co/BKtsGTyJ/483e8ef7f027ab5d6804f1fd68a19820-removebg-preview.png"/>
-                                    </div>
-                                </div>
-                                <div class="feature-card">
-                                    <div class="feature-icon">
-                                        <img src="https://i.ibb.co/xK1d6TpF/c810998a5026753db2dd482b8206fc5c-removebg-preview.png"/>
-                                    </div>
-                                </div>
-                                <div class="feature-card">
-                                    <div class="feature-icon">
-                                        <img  src="https://i.ibb.co/Z1vB523M/cee5096705d63d0e68689bc1e2284557-removebg-preview.png"/>
-                                    </div>
-                                </div>
-                                <div class="feature-card">
-                                    <div class="feature-icon">
-                                        <img  src="https://i.ibb.co/WvG2K7p4/Whats-App-Image-2025-03-23-at-00-08-43-290334b8-removebg-preview.pngno"/>
-                                    </div>
-                                </div>
-                                <div class="feature-card">
-                                    <div class="feature-icon">
-                                        <img  src="https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <div class="spec-item">
+                    <!-- to add later to Precautions -->
+                    <!-- <div class="spec-item">
                         
                         <ul class="spec-details">
                             <li data-lang="specs_safe_children">Keep out of reach of children and pets.</li>
                             <li data-lang="specs_wash_hands">Wash hands thoroughly after use.</li>
                             <li data-lang="specs_store">Store in a cool, dry place away from direct sunlight.</li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
            
+        </div>
+    </section>
+
+    <section style="background-color:var(--off-white);" class="application-section">
+        <div class="red-accent"></div>
+        <div class="content-wrapper">
+            <div class="zoneheader-container">
+                <h2 class="zoneheader" data-lang="zone_title">Application zone</h2>
+            </div>
+    
+            <div class="icons-grid">
+                <div class="icon-item">
+                    <div class="icon">
+                        <img src="https://i.ibb.co/WvTT0J4n/Picsart-25-03-23-00-13-42-157.png" alt="Maisons icon">
+                    </div>
+                    <div class="icon-label" data-lang="zone_label1">Warehouses</div>
+                </div>
+                
+                <div class="icon-item">
+                    <div class="icon">
+                        <img src="https://i.ibb.co/PvWPC088/Picsart-25-03-23-00-14-24-427.png" alt="Bâtiment icon">
+                    </div>
+                    <div class="icon-label" data-lang="zone_label2">buildings</div>
+                </div>
+                
+                <div class="icon-item">
+                    <div class="icon">
+                        <img src="https://i.ibb.co/F480WwQh/Picsart-25-03-23-00-15-00-492.png" alt="Hôtels icon">
+                    </div>
+                    <div class="icon-label" data-lang="zone_label3">Offices</div>
+                </div>
+                
+                <div class="icon-item">
+                    <div class="icon">
+                        <img src="https://i.ibb.co/hF5ybnH8/Picsart-25-03-23-00-14-41-629.png" alt="Bureaux icon">
+                    </div>
+                    <div class="icon-label"   data-lang="zone_label4">Houses</div>
+                </div>
+                
+                <div class="icon-item">
+                    <div class="icon">
+                        <img src="https://i.ibb.co/SwBdRJ8M/6e97eecc-b582-45c8-8f63-30d2452e1d12-removalai-preview-1.png" alt="Entrepôts icon">
+                    </div>
+                    <div class="icon-label"  data-lang="zone_label4">Factory</div>
+                </div>
+                
+                <div class="icon-item">
+                    <div class="icon">
+                        <img src="https://i.ibb.co/BVLqSPZC/Picsart-25-03-23-00-12-51-753.png" alt="Usines icon">
+                    </div>
+                    <div class="icon-label"  data-lang="zone_label5">Usines</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-lang="features_title">Precautions for use</h2>
+                <p data-lang="features_desc">
+                    For safety reasons, do not apply to areas accessible to children and pets. Wash your hands after each use.
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img  src="https://i.ibb.co/KxfKx8wS/kids-icon-7.png"/>
+                    </div>    
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img  src="https://i.ibb.co/BKtsGTyJ/483e8ef7f027ab5d6804f1fd68a19820-removebg-preview.png"/>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="https://i.ibb.co/xK1d6TpF/c810998a5026753db2dd482b8206fc5c-removebg-preview.png"/>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img  src="https://i.ibb.co/Z1vB523M/cee5096705d63d0e68689bc1e2284557-removebg-preview.png"/>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img  src="https://i.ibb.co/WvG2K7p4/Whats-App-Image-2025-03-23-at-00-08-43-290334b8-removebg-preview.pngno"/>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img  src="https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png"/>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     
@@ -1092,6 +1104,7 @@ https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png
         .red-accent {
             position: absolute;
             top: 0;
+            display: block;
             right: 0;
             width: 120px;
             height: 100%;
@@ -1206,6 +1219,13 @@ https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png
         }
 
 
+        .usageIn2nd{
+                flex-direction: row;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
         .icon {
             height: 100px;
             width: 100px;
@@ -1305,9 +1325,11 @@ https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png
             
             .red-accent {
                 width: 100px;
+                  visibility: hidden;
             }
         }
 
+      
         @media (max-width: 500px) {
             .application-section {
                 padding: 60px 15px;
@@ -1315,7 +1337,7 @@ https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png
             
             .icons-grid {
                 grid-template-columns: repeat(2, 1fr);
-                max-width: 320px;
+     
                 gap: 30px;
             }
             
@@ -1331,39 +1353,70 @@ https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png
             }
             
             .red-accent {
-                width: 80px;
-                transform: skewX(-12deg) translateX(40px);
+                width: 0px;
+                visibility: hidden;
+               
             }
-            
-            .icon {
-                height: 70px;
-                width: 70px;
+       
+           
+        }
+        .spec-details-parent{
+            width: 50%;
+        }
+
+        .spec-details-img{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+
+        @media (max-width: 720px) {
+        
+           
+            .spec-details-parent{
+                width: 100%;
+                position: relative;
+                
+            }
+
+            .spec-details-img{
+                width: 100%;
+               padding: 5px;
+                
+            }
+
+            .usageIn2nd{
+                flex-direction: column-reverse;
             }
         }
+       
+             
+        .img-footer-container{
+                display: inline-flex;
+                flex: 1;
+             text-align: right;
+             justify-content: center;
+             align-items: center;
+            }
+            .footer-logo-image {
+                max-width: 100px; 
+                height: auto;
+                display: inline-block;
+}
+
+
+        @media (max-width: 429px) {
+         
+         .icons-grid{
+             grid-template-columns: repeat(1, 1fr);
+             gap: 30px;  
+         }
+         
+       
+     }
     </style>
-
-
-
-
-<!-- 
-
-
-
-
-
-
-
-
-
-
-
--->
-
-
-
-
-
-
 
     <section class="faq" id="faq">
         <div class="container">
@@ -1535,8 +1588,22 @@ https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png
     </section>
     
 
+   
     <footer class="footer">
+
         <div class="container footer-container">
+
+
+            <div class="img-footer-container">
+
+                <div class="footer-logo-container">
+                    <img src="https://i.ibb.co/Wpfg7LrM/Picsart-25-03-29-18-18-44-841.png" class="footer-logo-image"/>
+                </div> 
+                <div class="footer-logo-container">
+                    <img src="https://i.ibb.co/7JBDLVbJ/logo-removebg-preview.png" class="footer-logo-image"/>
+                </div>
+            </div>
+
             <div class="footer-about">
                 <a href="#" class="footer-logo">Destrouch</a>
                 <p class="footer-text">Professional-grade cockroach elimination solution that's safe, effective, and easy to use.</p>
@@ -1547,16 +1614,22 @@ https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png
                     <a href="#" class="social-link">ig</a>
                 </div>
             </div>
-            
-            
+    
+       
             <div class="footer-links-column">
                 <h3 class="footer-title">Contact</h3>
                 <ul class="footer-links">
-                    
-                    <li class="footer-link"><a href="tel:+1234567890">(+213) 0560200090 </a></li>
+                    <li class="footer-link"><a href="tel:+1234567890">(+213) 0560200090</a></li>
                     <li class="footer-link"><a href="#">Contact Form</a></li>
                 </ul>
             </div>
+
+        
+          
+
+                  <!-- Logo Image moved to the right -->
+               
+        
         </div>
         <div class="copyright">
             <div class="container">
@@ -1564,6 +1637,7 @@ https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png
             </div>
         </div>
     </footer>
+    
 
     <script>
     document.getElementById('order-form').addEventListener('submit', async function(event) {
