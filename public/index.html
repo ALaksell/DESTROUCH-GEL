@@ -639,7 +639,7 @@
 
         .footer-container {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
+            grid-template-columns: 2fr 1fr 1fr ;
             gap: 40px;
         }
 
@@ -724,13 +724,14 @@
             font-size: 0.9rem;
         }
 
-        /* Responsive Styles */
+        
         @media (max-width: 992px) {
             .hero-container,
             .specs-container,
             .order-container,
             .footer-container {
                 grid-template-columns: 1fr;
+                padding: 15px;
                 gap: 40px;
             }
 
@@ -1392,20 +1393,37 @@ https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png
             }
         }
        
-             
+      
         .img-footer-container{
-                display: inline-flex;
-                flex: 1;
-             text-align: right;
-             justify-content: center;
-             align-items: center;
-            }
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+            padding: 40px 40px;
+          
+        }
+            
+            
             .footer-logo-image {
-                max-width: 100px; 
+                max-width: 50px; 
                 height: auto;
                 display: inline-block;
 }
 
+.info {
+            flex-grow: 1;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .info h2 {
+            margin: 0;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .info p {
+            margin: 5px 0;
+            font-size: 10px;
+        }
 
         @media (max-width: 429px) {
          
@@ -1416,6 +1434,11 @@ https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png
          
        
      }
+
+
+
+
+
     </style>
 
     <section class="faq" id="faq">
@@ -1590,44 +1613,67 @@ https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png
 
    
     <footer class="footer">
+<div class="footer-container">
 
-        <div class="container footer-container">
 
 
-            <div class="img-footer-container">
 
-                <div class="footer-logo-container">
-                    <img src="https://i.ibb.co/Wpfg7LrM/Picsart-25-03-29-18-18-44-841.png" class="footer-logo-image"/>
-                </div> 
-                <div class="footer-logo-container">
-                    <img src="https://i.ibb.co/7JBDLVbJ/logo-removebg-preview.png" class="footer-logo-image"/>
+
+          <div class="img-footer-container">
+                    <div>
+                  
+                        <img src="https://i.ibb.co/7JBDLVbJ/logo-removebg-preview.png" alt="Algerian Flag" class="footer-logo-image">
+                 
+                    </div>
+                    <div class="info">
+                        <h2>🏢 Fabriqué par : EL ZOUMOR LI EL HANDASA FILAHIA</h2>
+                        <p>📍 Adresse : KEDADRA - MOSTAGANEM - ALGERIA</p>
+                        <p>📞 0560 20 00 90</p>
+                    </div>
+                    <div >
+                    <img src="https://i.ibb.co/Wpfg7LrM/Picsart-25-03-29-18-18-44-841.png" alt="Company Logo" class="footer-logo-image">
+                 
                 </div>
-            </div>
-
-            <div class="footer-about">
-                <a href="#" class="footer-logo">Destrouch</a>
-                <p class="footer-text">Professional-grade cockroach elimination solution that's safe, effective, and easy to use.</p>
-                <div class="footer-social">
-                    <a href="#" class="social-link">f</a>
-                    <a href="#" class="social-link">t</a>
-                    <a href="#" class="social-link">in</a>
-                    <a href="#" class="social-link">ig</a>
+          </div> 
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">Destrouch</a>
+                    <p class="footer-text">Professional-grade cockroach elimination solution that's safe, effective, and easy to use.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">f</a>
+                        <a href="#" class="social-link">t</a>
+                        <a href="#" class="social-link">in</a>
+                        <a href="#" class="social-link">ig</a>
+                    </div>
                 </div>
-            </div>
-    
-       
-            <div class="footer-links-column">
-                <h3 class="footer-title">Contact</h3>
-                <ul class="footer-links">
-                    <li class="footer-link"><a href="tel:0560200090">(+213) 0560200090</a></li>
-                    <li class="footer-link"><a href="#">Contact Form</a></li>
-                </ul>
-            </div>
+        
+           
+                <div class="footer-links-column">
+                    <h3 class="footer-title">Contact</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="tel:0560200090">(+213) 0560200090</a></li>
+                        <li class="footer-link"><a href="#">Contact Form</a></li>
+                    </ul>
+                </div>
+
+
+     
+</div>
+
+        
+
+
+
+          
+            
+
+
+
+         
+
 
         
           
 
-                  <!-- Logo Image moved to the right -->
                
         
         </div>
