@@ -352,14 +352,24 @@
         .feature-text {
             color: var(--medium-gray);
             font-size: 0.95rem;
+
         }
 
-        /* Specs Section */
+       
         .specs {
+            position: relative;
+
             padding: 80px 0;
            
             background-color: white;
         }
+        /* 
+            background-image: url('https://i.ibb.co/3YdpszFX/Picsart-25-03-30-18-05-03-718-V2.png');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: normal;
+    background-repeat: no-repeat;
+} */
 
         .specs-container {
             display: flex;
@@ -872,12 +882,19 @@
 }
 
 
+@media (max-width:430px) {
+    .badge{
+        
+       
+        right: 50px;
+    }
+}
 
     </style>
 </head>
 <body>
     <header class="header">
-        <div class="container header-container">
+        <div  class="container header-container">
 
             <div class="brand">
                 <h1 class="brand-title">DESTROUCH GEL</h1>
@@ -900,14 +917,19 @@
 
 
     <section class="hero">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <div class="hero-bg"></div>
+        <div  class="container hero-container">
+            
+            <div  class="hero-content">
+
                 <h1 data-lang="hero_title">Professional <span>Cockroach Killer</span> Gel Solution</h1>
                 <p data-lang="hero_desc">
                     Destrouch Gel is a highly effective insecticide designed to eradicate all species of cockroaches. Its natural formula ensures long-lasting results without harmful chemicals.
                 </p>
-                <a href="#order" class="btn" data-lang="order_now">Order Now</a>
+                <div style="display: flex;justify-content:space-between;align-items: center;width: 100%;">
+                    <a href="#order" class="btn" data-lang="order_now">Order Now</a>
+                    <img src="https://i.ibb.co/ZpNFTWtV/Picsart-25-03-30-18-04-06-381.png" style="width: 100px;height: auto;"   />
+                </div>
+              
             </div>
             <div class="hero-image">
                 <img src="https://i.ibb.co/NDmY4dC/Picsart-25-03-29-16-44-50-743.png" alt="Destrouch Gel - Cockroach Killer" class="product-image">
@@ -922,7 +944,8 @@
 
 https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png
  -->
-    <section class="specs" id="specs">
+    <section style="position: relative;" class="specs" id="specs">
+
         <div class="container specs-container">
             <div class="specs-content">
                 <h2 data-lang="specs_title">Technical Specifications</h2>
@@ -976,20 +999,12 @@ https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png
                         </div>
                         
                     </div>
-                    <!-- to add later to Precautions -->
-                    <!-- <div class="spec-item">
-                        
-                        <ul class="spec-details">
-                            <li data-lang="specs_safe_children">Keep out of reach of children and pets.</li>
-                            <li data-lang="specs_wash_hands">Wash hands thoroughly after use.</li>
-                            <li data-lang="specs_store">Store in a cool, dry place away from direct sunlight.</li>
-                        </ul>
-                    </div> -->
+        
                 </div>
             </div>
            
         </div>
-    </section>
+   </section>
 
     <section style="background-color:var(--off-white);" class="application-section">
         <div class="red-accent"></div>
