@@ -15,8 +15,9 @@ app.post('/order', async (req, res) => {
         await sql.connect(connectionString);
         await sql.query`
             INSERT INTO customers (nom, prenom, quantity, phone_number, wilaya, adresse)
-            VALUES (${nom}, ${prenom}, ${quantity}, ${phone_number}, ${wilaya}, ${address})
+            VALUES (N${nom}, N${prenom}, ${quantity}, ${phone_number}, N${wilaya}, N${address})
         `;
+
         res.json({ message: 'Order added. We will contact you.' });
     } catch (err) {
         console.error('Error:', err);
