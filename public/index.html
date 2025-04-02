@@ -358,19 +358,38 @@
        
         .specs {
             position: relative;
-
             padding: 80px 0;
-           
-            background-color: white;
+            color: #333;
+            overflow: hidden;
         }
-        /* 
-            background-image: url('https://i.ibb.co/3YdpszFX/Picsart-25-03-30-18-05-03-718-V2.png');
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: normal;
-    background-repeat: no-repeat; 
-} */
-
+        .specs::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://i.ibb.co/LD2s8HMW/dd.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            filter: blur(2px);
+            z-index: 1;
+        }
+        .specs::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.45);
+            z-index: 2;
+        }
+        .specs-container {
+            position: relative;
+            z-index: 3;
+        }
         .specs-container {
             display: flex;
             flex-direction: column; 
@@ -419,6 +438,7 @@
 
         .spec-details {
             padding-left: 25px;
+
          
         }
 
@@ -426,7 +446,8 @@
          
         .spec-details li {
             margin-bottom: 8px;
-            color: var(--medium-gray);
+            font-weight: bold;
+            color: black;
         }
 
         .specs-image img {
@@ -947,6 +968,7 @@
     <section style="position: relative;" class="specs" id="specs">
 
         <div class="container specs-container">
+            <div class="specs-overlay"></div>
             <div class="specs-content">
                 <h2 data-lang="specs_title">Technical Specifications</h2>
                 <div class="specs-list">
