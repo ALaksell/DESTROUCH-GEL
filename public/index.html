@@ -1709,6 +1709,7 @@ Place your order right away to permanently eliminate your cockroach issues.
         quantity: document.getElementById('quantity').value
     };
 
+    console.log(JSON.stringify(Date.now()))
     const response = await fetch('/order', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
