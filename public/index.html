@@ -358,19 +358,38 @@
        
         .specs {
             position: relative;
-
             padding: 80px 0;
-           
-            background-color: white;
+            color: #333;
+            overflow: hidden;
         }
-        /* 
-            background-image: url('https://i.ibb.co/3YdpszFX/Picsart-25-03-30-18-05-03-718-V2.png');
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: normal;
-    background-repeat: no-repeat; 
-} */
-
+        .specs::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://i.ibb.co/LD2s8HMW/dd.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            filter: blur(1px);
+            z-index: 1;
+        }
+        .specs::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.45);
+            z-index: 2;
+        }
+        .specs-container {
+            position: relative;
+            z-index: 3;
+        }
         .specs-container {
             display: flex;
             flex-direction: column; 
@@ -428,6 +447,7 @@
 
         .spec-details {
             padding-left: 25px;
+
          
         }
 
@@ -435,7 +455,8 @@
          
         .spec-details li {
             margin-bottom: 8px;
-            color: var(--medium-gray);
+            font-weight: bold;
+            color: black;
         }
 
         .specs-image img {
@@ -950,8 +971,14 @@
         </div>
     </section>
 
+<<<<<<< HEAD
+=======
+
+ -->
+>>>>>>> fba67d736316d8e9409f926e7c24092e33d39a1f
     <section style="position: relative;" class="specs" id="specs">
         <div class="container specs-container">
+            <div class="specs-overlay"></div>
             <div class="specs-content">
                 <h2 data-lang="specs_title">Technical Specifications</h2>
                 <div class="specs-list">
@@ -1463,11 +1490,11 @@
         <span>+</span>
     </div>
     <div class="faq-answer">
-        <div style="padding-bottom: 15px;">
-            <p data-lang="faq_a3" style="font-size: 14px; color: #555;">
+        <div data-lang="faq_a3" style="padding-bottom: 15px;">
+            <p  style="font-size: 14px; color: #555;">
                 DESTROUCH GEL is effective everywhere cockroaches hide, including:
             </p>
-            <ol style="font-size: 14px; color: #555; margin-left: 20px;">
+            <ol  style="font-size: 14px; color: #555; margin-left: 20px;">
                 <li>Homes</li>
                 <li>Apartment buildings</li>
                 <li>Hotels</li>
@@ -1615,7 +1642,7 @@ Place your order right away to permanently eliminate your cockroach issues.
                  
                     </div>
                     <div class="info">
-                        <h4>🏢 manufactured by : EL ZOUMOR LI EL HANDASA FILAHIA</h4>
+                        <h4>🏢 Manufactured by : EL ZOUMOR LI EL HANDASA FILAHIA</h4>
                         <h2>📍 Adresse : KEDADRA - MOSTAGANEM - ALGERIA</h2>
                         <h2>📞 0560 20 00 90</h2>
                     </div>
@@ -1714,7 +1741,7 @@ Place your order right away to permanently eliminate your cockroach issues.
             navMenu.classList.toggle('active');
         });
 
-        // Smooth Scrolling for Anchor Links
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -1839,8 +1866,16 @@ Place your order right away to permanently eliminate your cockroach issues.
             order_title: "Get Your Destrouch Gel Today",
             order_desc: "Experience professional-grade cockroach elimination with our specially formulated gel. Order now and say goodbye to cockroach problems for good.",
             order_guarantee: "100% Satisfaction Guarantee. If you're not completely satisfied with the results, we offer a 30-day money-back guarantee.",
-            footer_desc: "Professional-grade cockroach elimination solution that's safe, effective, and easy to use."
- 
+            footer_desc: "Professional-grade cockroach elimination solution that's safe, effective, and easy to use.",
+                zone_title:"Application zone",
+                zone_label1:"Warehouses",
+                zone_label2:"buildings",
+                zone_label3:"Offices",
+                zone_label4:"Houses",
+                zone_label5:"Factory",
+                zone_label6:"Hotles"
+
+
             },
             ar: {
                 home: "الرئيسية",
@@ -1896,9 +1931,31 @@ Place your order right away to permanently eliminate your cockroach issues.
             faq_desc: "اعثر على إجابات للأسئلة الشائعة حول جل ديستروش",
             faq_q1: "هل جل ديستروش آمن للاستخدام حول الأطفال والحيوانات الأليفة؟",
             faq_a1: "على الرغم من أن جل ديستروش يستخدم مكونات طبيعية، نوصي بإبقائه بعيدًا عن متناول الأطفال والحيوانات الأليفة...",
-            order_title: "احصل على جل ديستروش اليوم",
-            order_guarantee: "ضمان الرضا 100%. إذا لم تكن راضيًا عن النتائج، نضمن لك استرداد الأموال خلال 30 يومًا."
-      
+                faq_q2: "كم تدوم مدة استخدام جل ديستروش؟",
+               faq_a2: "يمكن استخدام المنتج حتى 3 اشهر في منزل متوسط الحجم ",
+                faq_q3: "ماهي اماكن استعمال هذا المنتج",
+                faq_a3: "جل ديستروش فعال في كل مكان تختبئ فيه الصراصير، بما في ذلك:\n" +
+                    "\n" +
+                    "المنازل\n" +
+                    "\n" +
+                    "المباني السكنية\n" +
+                    "\n" +
+                    "الفنادق\n" +
+                    "\n" +
+                    "المكاتب\n" +
+                    "\n" +
+                    "المستودعات\n" +
+                    "\n" +
+                    "المصانع ",
+
+
+                zone_title:"مناطق التطبيق",
+                zone_label1:"مستودعات",
+                zone_label2:"البنايات",
+                zone_label3:"المكاتب",
+                zone_label4:"المنازل",
+                zone_label5:"المصانع",
+                zone_label6:"الفنادق"
             }
         };
     
