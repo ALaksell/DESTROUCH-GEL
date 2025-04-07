@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Destrouch Gel - Professional Cockroach Killer</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap"
+          rel="stylesheet">
     <style>
         :root {
             --primary-red: #C8102E;
@@ -15,7 +16,7 @@
             --medium-gray: #888888;
             overflow-x: hidden;
             --deep-black: #222222;
-            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             --transition: all 0.3s ease;
         }
 
@@ -48,11 +49,12 @@
         /* Header Styles */
         .header {
             background-color: var(--pure-white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             position: sticky;
             top: 0;
             z-index: 100;
         }
+
         .language-switch {
             display: flex;
             align-items: center;
@@ -61,38 +63,38 @@
             z-index: 101;
         }
 
-.lang-btn {
-    background: none;
-    border: 2px solid var(--primary-red);
-    color: var(--deep-black);
-    font-weight: 600;
-    font-size: 0.85rem;
-    padding: 6px 12px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin: 0 5px;
-    outline: none;
-}
+        .lang-btn {
+            background: none;
+            border: 2px solid var(--primary-red);
+            color: var(--deep-black);
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 6px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0 5px;
+            outline: none;
+        }
 
-.lang-btn:hover, .lang-btn.active {
-    background-color: var(--primary-red);
-    color: var(--pure-white);
-}
+        .lang-btn:hover, .lang-btn.active {
+            background-color: var(--primary-red);
+            color: var(--pure-white);
+        }
 
-.lang-btn.active {
-    box-shadow: 0 2px 8px rgba(233, 30, 99, 0.3);
-}
+        .lang-btn.active {
+            box-shadow: 0 2px 8px rgba(233, 30, 99, 0.3);
+        }
 
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
         .brand {
             display: flex;
@@ -196,55 +198,59 @@
             color: var(--medium-gray);
             margin-bottom: 30px;
         }
+
         .hero-image {
             position: relative;
         }
 
         .product-image {
-            width: 65vh;
+            width: 50vh;
             height: auto;
-           
+
         }
+
         .select-container {
-      margin-bottom: 20px;
-    }
-    
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
-      color: #333;
-    }
-    
-    select {
-      width: 100%;
-      padding: 10px 14px;
-      font-size: 16px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      background-color: #fff;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 10px center;
-      color: #333;
-    }
-    
-    select:hover {
-      border-color: #999;
-    }
-    
-    select:focus {
-      outline: none;
-      border-color: #4a90e2;
-      box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
-    }
-    
-    option {
-      padding: 8px;
-    }
-      
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px 14px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            color: #333;
+        }
+
+        select:hover {
+            border-color: #999;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #4a90e2;
+            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+        }
+
+
+
+        option {
+            padding: 8px;
+        }
+
 
         .badge {
             position: absolute;
@@ -274,6 +280,16 @@
         .badge-value {
             font-size: 1.5rem;
         }
+
+
+        .choose-destrouchGel-container {
+            display: inline-flex;
+            flex-direction: row;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+
 
         /* Features Section */
         .features {
@@ -314,29 +330,28 @@
         .features-grid {
             display: flex;
             flex-direction: row;
-           width: 100%;
-           justify-content: center;
-           align-items:center;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
         }
 
         .feature-card {
-            
-           
+
+
             padding: 10px;
             text-align: center;
-      
+
         }
 
-     
 
         .feature-icon {
             font-size: 2.5rem;
             color: var(--primary-red);
             margin-bottom: 20px;
-         
+
         }
 
-        .feature-icon  img{
+        .feature-icon img {
             width: 100px;
             height: 100px;
             object-fit: cover;
@@ -355,27 +370,15 @@
 
         }
 
-       
+
         .specs {
             position: relative;
             padding: 80px 0;
             color: #333;
-            overflow: hidden;
+            background-color: #fff;
+
         }
-        .specs::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://i.ibb.co/LD2s8HMW/dd.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            filter: blur(1px);
-            z-index: 1;
-        }
+
         .specs::after {
             content: '';
             position: absolute;
@@ -386,13 +389,15 @@
             background-color: rgba(255, 255, 255, 0.45);
             z-index: 2;
         }
+
         .specs-container {
             position: relative;
             z-index: 3;
         }
+
         .specs-container {
             display: flex;
-            flex-direction: column; 
+            flex-direction: column;
             width: 100%;
             gap: 100px;
             padding-top: 15px;
@@ -403,9 +408,8 @@
         .specs-content h2 {
             font-size: 2.2rem;
             margin-bottom: 30px;
-           
-           
-           
+
+
             color: var(--deep-black);
         }
 
@@ -445,27 +449,19 @@
             margin-right: 10px;
         }
 
-        .spec-details {
-            padding-left: 25px;
 
-         
-        }
-
-
-         
         .spec-details li {
             margin-bottom: 8px;
             font-weight: bold;
             color: black;
         }
 
-        .specs-image img {
-            width: 100%;
+        .specs-image {
+            width: 10rem;
+            height: auto;
             border-radius: 20px;
             box-shadow: var(--shadow);
         }
-
-   
 
 
         .author-info h4 {
@@ -564,6 +560,14 @@
             font-weight: 600;
             color: var(--deep-black);
             font-size: 0.9rem;
+        }
+
+        .spec-details-img {
+            width: 50%;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
         }
 
         .form-control {
@@ -679,7 +683,7 @@
 
         .footer-container {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr ;
+            grid-template-columns: 2fr 1fr 1fr;
             gap: 40px;
         }
 
@@ -746,10 +750,12 @@
             color: var(--primary-red);
             padding-left: 5px;
         }
+
         body[dir="rtl"] {
             direction: rtl;
             text-align: right;
         }
+
         body[dir="ltr"] {
             direction: ltr;
             text-align: left;
@@ -764,7 +770,7 @@
             font-size: 0.9rem;
         }
 
-        
+
         @media (max-width: 992px) {
             .hero-container,
             .specs-container,
@@ -778,7 +784,6 @@
             .features-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-
 
 
             .badge {
@@ -798,8 +803,7 @@
             .nav-toggle {
                 display: block;
             }
-            
-          
+
 
             .hero-container {
 
@@ -807,7 +811,8 @@
 
             }
 
-            .hero-content{
+
+            .hero-content {
                 min-height: 100vh;
                 display: flex;
                 align-items: center;
@@ -816,9 +821,10 @@
 
             }
 
-            .brand-title{
+            .brand-title {
                 font-size: 1rem;
             }
+
             .nav-menu {
                 position: fixed;
                 top: 70px;
@@ -828,7 +834,7 @@
                 flex-direction: column;
                 align-items: center;
                 padding: 20px 0;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
                 transform: translateY(-150%);
                 transition: var(--transition);
                 z-index: 99;
@@ -845,17 +851,14 @@
             .features-grid {
                 flex-wrap: wrap;
                 display: flex;
-            
+
             }
 
             .hero-content h1 {
                 font-size: 2.2rem;
             }
 
-           
-            
- 
-            
+
             .section-title h2 {
                 font-size: 1.8rem;
             }
@@ -868,19 +871,31 @@
             .price-tag {
                 font-size: 2.5rem;
             }
-        }
-        @media (max-width: 768px) {
-         .header-container {
-         padding: 10px 15px;
-         }
-    
 
-    
-    .lang-btn {
-        padding: 4px 8px;
-        font-size: 0.75rem;
-    }
-}
+
+            .choose-destrouchGel-container {
+                flex-direction: column;
+            }
+
+            .spec-details-img{
+                display: flex;
+                flex-direction: row-reverse;
+
+            }
+
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 10px 15px;
+            }
+
+
+            .lang-btn {
+                padding: 4px 8px;
+                font-size: 0.75rem;
+            }
+        }
 
         @media (max-width: 390px) {
 
@@ -890,954 +905,968 @@
         }
 
 
-[dir="rtl"] .nav-item {
-    margin-left: 0;
-    margin-right: 30px;
-}
+        [dir="rtl"] .nav-item {
+            margin-left: 0;
+            margin-right: 30px;
+        }
 
-[dir="rtl"] .nav-link:after {
-    left: auto;
-    right: 0;
-}
-
-
+        [dir="rtl"] .nav-link:after {
+            left: auto;
+            right: 0;
+        }
 
 
-[dir="rtl"] .header-container {
-    flex-direction: row-reverse;
-}
+        [dir="rtl"] .header-container {
+            flex-direction: row-reverse;
+        }
 
-[dir="rtl"] .brand {
-    flex-direction: row-reverse;
-}
+        [dir="rtl"] .brand {
+            flex-direction: row-reverse;
+        }
 
 
-@media (max-width:430px) {
-    .badge{
-        
-       
-        right: 50px;
-    }
-}
+        @media (max-width: 430px) {
+            .badge {
+
+
+                right: 50px;
+            }
+
+        }
 
     </style>
 </head>
 <body>
-    <header class="header">
-        <div  class="container header-container">
+<header class="header">
+    <div class="container header-container">
 
-            <div class="brand">
-                <h1 class="brand-title">DESTROUCH GEL</h1>
-            </div>
-            <div class="language-switch">
-                <button id="lang-en" class="lang-btn">English</button>
-                <button id="lang-ar" class="lang-btn">العربية</button>
-            </div>
-            <button class="nav-toggle" id="navToggle">☰</button>
-            <nav class="hamicon">
-                <ul class="nav-menu" id="navMenu">
-                    <li class="nav-item"><a href="#" class="nav-link" data-lang="home">Home</a></li>
-                    <li class="nav-item"><a href="#features" class="nav-link" data-lang="features">Features</a></li>
-                    <li class="nav-item"><a href="#specs" class="nav-link" data-lang="specs">Specifications</a></li>
-                    <li class="nav-item"><a href="#order" class="nav-link" data-lang="order">Order Now</a></li>
-                </ul>
-            </nav>
+        <div class="brand">
+            <h1 class="brand-title">DESTROUCH GEL</h1>
         </div>
-    </header>
+        <div class="language-switch">
+            <button class="lang-btn" id="lang-en">English</button>
+            <button class="lang-btn" id="lang-ar">العربية</button>
+        </div>
+        <button class="nav-toggle" id="navToggle">☰</button>
+        <nav class="hamicon">
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a class="nav-link" data-lang="home" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" data-lang="features" href="#features">Features</a></li>
+                <li class="nav-item"><a class="nav-link" data-lang="specs" href="#specs">Specifications</a></li>
+                <li class="nav-item"><a class="nav-link" data-lang="order" href="#order">Order Now</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
 
-    <section class="hero">
-        <div  class="container hero-container">
-            
-            <div  class="hero-content">
+<section class="hero">
+    <div class="container hero-container">
 
-                <h1 data-lang="hero_title">Destrouch Gel <span>Cockroach Killer</span> </h1>
-               <span><h3>Eliminate cockroaches permanently with a natural solution with proven effectiveness.</h3></span>
-                <span><p><p data-lang="hero_desc">DESTROUCH GEL is an insecticide specially designed to eradicate all species of cockroaches. Its unique formula, based on natural ingredients, ensures effective and long-lasting elimination of these pests without the use of harsh chemicals.</p></span>
-                </p>
-                <div style="display: flex;justify-content:space-between;align-items: center;width: 100%;">
-                    <a href="#order" class="btn" data-lang="order_now">Order Now</a>
-                    <img src="https://i.ibb.co/qYHzyHPs/Picsart-25-04-03-23-55-20-481.png" style="width: 85px;height: auto;"   />
-                </div>
-              
+        <div class="hero-content">
+
+            <h1 data-lang="hero_title">Destrouch Gel <span>Cockroach Killer</span></h1>
+            <span><h3>Eliminate cockroaches permanently with a natural solution with proven effectiveness.</h3></span>
+            <span><p><p data-lang="hero_desc">DESTROUCH GEL is an insecticide specially designed to eradicate all species of cockroaches. Its unique formula, based on natural ingredients, ensures effective and long-lasting elimination of these pests without the use of harsh chemicals.</p></span>
+            </p>
+            <div style="display: flex;justify-content:space-between;align-items: center;width: 100%;">
+                <a class="btn" data-lang="order_now" href="#order">Order Now</a>
+                <img src="https://i.ibb.co/qYHzyHPs/Picsart-25-04-03-23-55-20-481.png"
+                     style="width: 85px;height: auto;"/>
             </div>
-            <div class="hero-image">
-                <img src="https://i.ibb.co/NDmY4dC/Picsart-25-03-29-16-44-50-743.png" alt="Destrouch Gel - Cockroach Killer" class="product-image">
-                <div class="badge">
-                    <div class="badge-text" data-lang="badge_only">Only</div>
-                    <div class="badge-value">690DA</div>
-                </div>
+
+        </div>
+        <div class="hero-image">
+            <img alt="Destrouch Gel - Cockroach Killer"
+                 class="product-image" src="https://i.ibb.co/fdDx6TWQ/Picsart-25-03-29-16-02-55-435.webp">
+            <div class="badge">
+                <div class="badge-text" data-lang="badge_only">Only</div>
+                <div class="badge-value">690DA</div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section style="position: relative;" class="specs" id="specs">
-        <div class="container specs-container">
-            <div class="specs-overlay"></div>
-            <div class="specs-content">
-                <h2 data-lang="specs_title">Technical Specifications</h2>
-                <div class="specs-list">
-                    <div class="spec-item">
-                     <h3 class="spec-title" data-lang="specs_usage">Composition</h3>
-                        <table border="1" style="border-collapse: collapse; width: 100%; text-align: center; font-family: Arial, sans-serif;">
-                            <thead>
-                                <tr style="background-color: #f2f2f2;">
-                                    <th data-lang="specs_feature" style="padding: 10px;">appearance & color
-                                    <th data-lang="specs_description" style="padding: 10px;">Brown gel</th>
-                                    <th style="padding: 10px;">طبيعة المنتج</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td style="padding: 8px;">Active ingredient(Oleandrin)</td>
-                                    <td style="padding: 8px;">0.13%</td>
-                                    <td style="padding: 8px;">المادة الفعالة</td>
-                                </tr>
-                                <tr>
-                                    <td style="padding: 8px;">Attractants ingredient</td>
-                                    <td style="padding: 8px;">75%</td>
-                                    <td style="padding: 8px;">المواد الجاذبة</td>
-                                </tr>  
-                            </tbody>
-                        </table>
-                        <h4>Foarmat: -Seringue de 40 ml</h4>
-                    </div>
-                    <div>
-                        <h3 class="askqus" > Why choose DESTROUCH GEL? </h3>
-                        <li>Effective elimination of all cockroach species</li>
-                        <li>Formula based on natural ingredients (OLEANDRINE )</li>
-                        <li>Long-lasting action</li>
-                        <li>Easy to apply with a practical applicator syringe</li>
-                        <li>Formulated without harmful chemicals</li>
-                    </div>
-                        
-                    <!-- <div class="spec-item"> -->
-                        <div style="gap:10px;display:inline-flex;justify-content: center;justify-items: center; width: 100%;flex-direction: column;">
-                            <h3 class="spec-title" data-lang="specs_usage">Instructions fore Use</h3>
-                            
-                            <div class="usageIn2nd">
-                            <div  class="spec-details-parent">
-                               <ol class="spec-details">
-                                   <h4>Applying DESTROUCH GEL is simple:</h4>
-                                    <li data-lang="specs_step2">Carefully remove the cap</li>
-                                    <li data-lang="specs_step3">Place drops (approximately 5 mm in diameter) on the affected areas. The number of droplets depends on the severity of the insect infestation.</li>
-                                    <li data-lang="specs_step4">Close after each use.</li>
-                                </ol>
-                            </div>
-                            <div class="spec-details-img">
-                                <div class="specs-image">
-                                    <img src="https://i.ibb.co/DHwX9RSb/3tchkat.jpg" alt="Destrouch Gel Application" />
-                                </div>
-                            </div>
-                          </div>
-                           
+<section  class="specs" id="specs" style="position: relative;">
+
+    <div  class="container specs-container">
+        <div  class="specs-content">
+            <h2 data-lang="specs_title">Technical Specifications</h2>
+            <div class="specs-list">
+                <div class="spec-item">
+                    <h3 class="spec-title" data-lang="specs_usage">Composition</h3>
+                    <table border="1"
+                           style="border-collapse: collapse; width: 100%; text-align: center; font-family: Arial, sans-serif;">
+                        <thead>
+                        <tr style="background-color: #f2f2f2;">
+                            <th data-lang="specs_feature" style="padding: 10px;">appearance & color
+                            <th data-lang="specs_description" style="padding: 10px;">Brown gel</th>
+                            <th style="padding: 10px;">طبيعة المنتج</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td style="padding: 8px;">Active ingredient(Oleandrin)</td>
+                            <td style="padding: 8px;">0.13%</td>
+                            <td style="padding: 8px;">المادة الفعالة</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px;">Attractants ingredient</td>
+                            <td style="padding: 8px;">75%</td>
+                            <td style="padding: 8px;">المواد الجاذبة</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <img style="width: 18rem;align-self: center" src="https://i.ibb.co/9HsZ9Ft4/Whats-App-Image-2025-01-22-15-25-33-8e9e395b.png" />
+
+                    <h4>Foarmat: -Seringue de 40 ml</h4>
+                </div>
+
+                <div class="choose-destrouchGel-container">
+                    <div class="instru_list">
+                        <h3 class="askqus"> Why choose DESTROUCH GEL? </h3>
+                        <ul style="padding: 15px">
+                            <li>Effective elimination of all cockroach species</li>
+                            <li>Formula based on natural ingredients (OLEANDRINE )</li>
+                            <li>Long-lasting action</li>
+                            <li>Easy to apply with a practical applicator syringe</li>
+                            <li>Formulated without harmful chemicals</li>
+
+                        </ul>
+                        <h3 class="spec-title" data-lang="specs_usage">Instructions for Use</h3>
+                        <div class="instru_list">
+                            <li style="list-style: none"> Applying DESTROUCH GEL is simple:</li>
+                            <ul style="padding: 15px">
+                                <li>Carefully remove the cap</li>
+                                <li>Formula based on natural ingredients (OLEANDRINE )</li>
+                                <li>Place drops (approximately 5 mm in diameter) on the affected areas. The number of
+                                    droplets depends on the severity of the insect infestation.
+                                </li>
+                                <li>Close after each use.</li>
+                            </ul>
+
+
                         </div>
-                        
                     </div>
-                </div>
-            </div>
-           
-        </div>
-   </section>
-    <section style="background-color:var(--off-white);" class="application-section">
-        <div class="red-accent"></div>
-        <div class="content-wrapper">
-            <div class="zoneheader-container">
-                <h2 class="zoneheader" data-lang="zone_title">Application zone</h2>
-            </div>
-            <div class="icons-grid">
-                <div class="icon-item">
-                    <div class="icon">
-                        <img src="https://i.ibb.co/WvTT0J4n/Picsart-25-03-23-00-13-42-157.png" alt="Maisons icon">
-                    </div>
-                    <div class="icon-label" data-lang="zone_label1">Warehouses</div>
-                </div>
-                
-                <div class="icon-item">
-                    <div class="icon">
-                        <img src="https://i.ibb.co/PvWPC088/Picsart-25-03-23-00-14-24-427.png" alt="Bâtiment icon">
-                    </div>
-                    <div class="icon-label" data-lang="zone_label2">buildings</div>
-                </div>
-                <div class="icon-item">
-                    <div class="icon">
-                        <img src="https://i.ibb.co/F480WwQh/Picsart-25-03-23-00-15-00-492.png" alt="Hôtels icon">
-                    </div>
-                    <div class="icon-label" data-lang="zone_label3">Offices</div>
-                </div>
-                <div class="icon-item">
-                    <div class="icon">
-                        <img src="https://i.ibb.co/hF5ybnH8/Picsart-25-03-23-00-14-41-629.png" alt="Bureaux icon">
-                    </div>
-                    <div class="icon-label"   data-lang="zone_label4">Houses</div>
-                </div>
-                <div class="icon-item">
-                    <div class="icon">
-                        <img src="https://i.ibb.co/SwBdRJ8M/6e97eecc-b582-45c8-8f63-30d2452e1d12-removalai-preview-1.png" alt="Entrepôts icon">
-                    </div>
-                    <div class="icon-label"  data-lang="zone_label4">Factory</div>
-                </div>
-                <div class="icon-item">
-                    <div class="icon">
-                        <img src="https://i.ibb.co/BVLqSPZC/Picsart-25-03-23-00-12-51-753.png" alt="Usines icon">
-                    </div>
-                    <div class="icon-label"  data-lang="zone_label5">Hotles</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="features" id="features">
-        <div class="container">
-            <div class="section-title">
-                <h2 data-lang="features_title">Precautions for use</h2>
-                <p data-lang="features_desc">
-                    For safety reasons, do not apply to areas accessible to children and pets. Wash your hands after each use.
-                </p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <img  src="https://i.ibb.co/KxfKx8wS/kids-icon-7.png"/>
-                    </div>    
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <img  src="https://i.ibb.co/BKtsGTyJ/483e8ef7f027ab5d6804f1fd68a19820-removebg-preview.png"/>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <img src="https://i.ibb.co/xK1d6TpF/c810998a5026753db2dd482b8206fc5c-removebg-preview.png"/>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <img  src="https://i.ibb.co/Z1vB523M/cee5096705d63d0e68689bc1e2284557-removebg-preview.png"/>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <!-- <div class="feature-icon">
-                        <img  src="https://i.ibb.co/WvG2K7p4/Whats-App-Image-2025-03-23-at-00-08-43-290334b8-removebg-preview.pngno"/>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <img  src="https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png"/>
-                    </div>
-                </div> -->
-            </div>
-        </div>
-    </section>
-    <div class="center-box">
-        <ul>
-          <span><h3>•Registration of the formula with the C.A.P. department of Algiers</h3></span>
-          <p>•Registration of the trademark with INAPI (Algerian National Institute of Industrial Property) under number 23384</p>
-        </ul>
-        <h3>• In case of emergency, call poison control center (10 32)</h3>
-      </div>
-    <style>
-             .application-section {
-            margin: 0 auto;
-            padding: 80px 20px;
-            position: relative;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background-color: white;
-            overflow: hidden;
-            box-shadow: 0 0 40px rgba(0, 0, 0, 0.03);
-        }
-        .red-accent {
-            position: absolute;
-            top: 0;
-            display: block;
-            right: 0;
-            width: 120px;
-            height: 100%;
-            background: linear-gradient(135deg, #ff3a3a, #c20000);
-            z-index: 0;
-            transform: skewX(-12deg) translateX(60px);
-            box-shadow: -10px 0 30px rgba(194, 0, 0, 0.15);
-        }
-        .content-wrapper {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            width: 100%;
-            flex-direction: column;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            max-width: 1200px;
-        }
-        .zoneheader-container {
-            margin-bottom: 40px;
-            position: relative;
-            display: inline-block;
-        }
-        .zoneheader {
-            display: inline-block;
-            background: linear-gradient(135deg, #ff3a3a, #c20000);
-            color: white;
-            padding: 14px 40px;
-            font-size: 28px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            border-radius: 8px;
-            box-shadow: 0 10px 25px rgba(194, 0, 0, 0.25);
-            position: relative;
-            overflow: hidden;
-        }
-        .zoneheader::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transform: translateX(-100%);
-            animation: shine 3s infinite;
-        }
-        @keyframes shine {
-            100% {
-                transform: translateX(100%);
-            }
-        }
-        .description {
-            font-size: 22px;
-            font-weight: 500;
-            color: #333;
-            margin-bottom: 60px;
-            
-            max-width: 70%;
-            line-height: 1.5;
-        }
-        .product-name {
-            font-weight: 700;
-            color: #c20000;
-            position: relative;
-            display: inline-block;
-        }
-        .product-name::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: #c20000;
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.3s ease;
-        }
-        .product-name:hover::after {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
-        .icons-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 50px 40px;
-            width: 100%;
-            max-width: 1000px;
-            padding: 0 25px;
-        }
-        .icon-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            padding: 20px;
-            border-radius: 16px;
-        }
-        .usageIn2nd{
-                flex-direction: row;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-        .icon {
-            height: 100px;
-            width: 100px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #f8f8f8;
-            border-radius: 50%;
-            padding: 20px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        .icon::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            background: linear-gradient(135deg, rgba(255, 58, 58, 0.1), rgba(194, 0, 0, 0.05));
-            border-radius: 50%;
-            opacity: 0;
-            transform: scale(0.8);
-            transition: all 0.4s ease;
-        }
-        .icon-item:hover .icon {
-            box-shadow: 0 15px 30px rgba(194, 0, 0, 0.15);
-        }
-        .icon-item:hover .icon::before {
-            opacity: 1;
-            transform: scale(1);
-        }
-        .icon img {
-            max-height: 100%;
-            max-width: 100%;
-            object-fit: contain;
-            transition: transform 0.4s ease;
-            filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
-        }
-        .icon-item:hover .icon img {
-            transform: scale(1.1);
-        }
-        .icon-label {
-            font-weight: 600;
-            font-size: 20px;
-            color: #333;
-            transition: all 0.3s ease;
-            position: relative;
-            padding-bottom: 8px;
-        }
-        .icon-label::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background-color: #c20000;
-            transform: translateX(-50%);
-            transition: width 0.3s ease;
-        }
-        .icon-item:hover .icon-label {
-            color: #c20000;
-        }
-        .icon-item:hover .icon-label::after {
-            width: 40px;
-        }
-        @media (max-width: 900px) {
-            .icons-grid {
-                grid-template-columns: repeat(2, 1fr);
-                max-width: 700px;
-                gap: 40px 30px;
-            }
-            
-            .description {
-                max-width: 85%;
-                font-size: 20px;
-            }
-            
-            .zoneheader {
-                font-size: 24px;
-                padding: 12px 30px;
-            }
-            
-            .red-accent {
-                width: 100px;
-                  visibility: hidden;
-            }
-        }
-        @media (max-width: 500px) {
-            .application-section {
-                padding: 60px 15px;
-            }
-            
-            .icons-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 30px;
-            }
-            
-            .description {
-                max-width: 100%;
-                font-size: 18px;
-                margin-bottom: 40px;
-            }
-            
-            .zoneheader {
-                font-size: 22px;
-                padding: 10px 25px;
-            }
-            
-            .red-accent {
-                width: 0px;
-                visibility: hidden;
-            }
-        }
-        .spec-details-parent{
-            width: 50%;
-        }
-        .spec-details-img{
-            width: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        @media (max-width: 720px) {
-        
-            .spec-details-parent{
-                width: 100%;
-                position: relative;
-                
-            }
-            .spec-details-img{
-                width: 100%;
-            padding: 5px;
-                
-            }
-            .usageIn2nd{
-                flex-direction: column-reverse;
-            }
-        }
-        .img-footer-container{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 40px 40px;
-        }
-            
-            
-            .footer-logo-image {
-                max-width: 50px; 
-                height: auto;
-                display: inline-block;
-}
-.info {
-            flex-grow: 1;
-            padding: 0 20px;
-            text-align: center;
-        }
-        .info h2 {
-            margin: 0;
-            font-size: 12px;
-            font-weight: bold;
-        }
-        .info p {
-            margin: 5px 0;
-            font-size: 10px;
-        }
-        @media (max-width: 429px) {
-         
-         .icons-grid{
-             grid-template-columns: repeat(1, 1fr);
-             gap: 30px;  
-         }     }
+                    <div class="spec-details-img">
+                        <img alt="Destrouch Gel Application"
+                             class="specs-image"
+                             src="https://i.ibb.co/VYX82ysN/Screenshot-20250322-231153-Chrome-picaai.png"/>
+                        <img alt="Destrouch Gel Application" class="specs-image"
+                             src="https://i.ibb.co/mrxqxS48/upscalemedia-transformed-1.jpg"/>
+                        <img alt="Destrouch Gel Application" class="specs-image"
+                             src="https://i.ibb.co/KzDr8g6R/upscalemedia-transformed.jpg"/>
 
-     .center-box {
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      text-align: center;
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    </div>
+</section>
+<section class="application-section" style="background-color:var(--off-white);">
+    <div class="red-accent"></div>
+    <div class="content-wrapper">
+        <div class="zoneheader-container">
+            <h2 class="zoneheader" data-lang="zone_title">Application zone</h2>
+        </div>
+        <div class="icons-grid">
+            <div class="icon-item">
+                <div class="icon">
+                    <img alt="Maisons icon" src="https://i.ibb.co/WvTT0J4n/Picsart-25-03-23-00-13-42-157.png">
+                </div>
+                <div class="icon-label" data-lang="zone_label1">Warehouses</div>
+            </div>
+
+            <div class="icon-item">
+                <div class="icon">
+                    <img alt="Bâtiment icon" src="https://i.ibb.co/PvWPC088/Picsart-25-03-23-00-14-24-427.png">
+                </div>
+                <div class="icon-label" data-lang="zone_label2">buildings</div>
+            </div>
+            <div class="icon-item">
+                <div class="icon">
+                    <img alt="Hôtels icon" src="https://i.ibb.co/F480WwQh/Picsart-25-03-23-00-15-00-492.png">
+                </div>
+                <div class="icon-label" data-lang="zone_label3">Offices</div>
+            </div>
+            <div class="icon-item">
+                <div class="icon">
+                    <img alt="Bureaux icon" src="https://i.ibb.co/hF5ybnH8/Picsart-25-03-23-00-14-41-629.png">
+                </div>
+                <div class="icon-label" data-lang="zone_label4">Houses</div>
+            </div>
+            <div class="icon-item">
+                <div class="icon">
+                    <img alt="Entrepôts icon"
+                         src="https://i.ibb.co/SwBdRJ8M/6e97eecc-b582-45c8-8f63-30d2452e1d12-removalai-preview-1.png">
+                </div>
+                <div class="icon-label" data-lang="zone_label4">Factory</div>
+            </div>
+            <div class="icon-item">
+                <div class="icon">
+                    <img alt="Usines icon" src="https://i.ibb.co/BVLqSPZC/Picsart-25-03-23-00-12-51-753.png">
+                </div>
+                <div class="icon-label" data-lang="zone_label5">Hotles</div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="features" id="features">
+    <div class="container">
+        <div class="section-title">
+            <h2 data-lang="features_title">Precautions for use</h2>
+            <p data-lang="features_desc">
+                For safety reasons, do not apply to areas accessible to children and pets. Wash your hands after each
+                use.
+            </p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="https://i.ibb.co/KxfKx8wS/kids-icon-7.png"/>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="https://i.ibb.co/BKtsGTyJ/483e8ef7f027ab5d6804f1fd68a19820-removebg-preview.png"/>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="https://i.ibb.co/xK1d6TpF/c810998a5026753db2dd482b8206fc5c-removebg-preview.png"/>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="https://i.ibb.co/Z1vB523M/cee5096705d63d0e68689bc1e2284557-removebg-preview.png"/>
+                </div>
+            </div>
+            <div class="feature-card">
+                <!-- <div class="feature-icon">
+                    <img  src="https://i.ibb.co/WvG2K7p4/Whats-App-Image-2025-03-23-at-00-08-43-290334b8-removebg-preview.pngno"/>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img  src="https://i.ibb.co/QFx8rbFS/69ff087d2e16907b5b316de3f53962a2-removebg-preview.png"/>
+                </div>
+            </div> -->
+            </div>
+        </div>
+</section>
+<div class="center-box">
+    <ul>
+        <span><h3>•Registration of the formula with the C.A.P. department of Algiers</h3></span>
+        <p>•Registration of the trademark with INAPI (Algerian National Institute of Industrial Property) under number
+            23384</p>
+    </ul>
+    <h3>• In case of emergency, call poison control center (10 32)</h3>
+</div>
+<style>
+    .application-section {
+        margin: 0 auto;
+        padding: 80px 20px;
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: white;
+        overflow: hidden;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.03);
+    }
+
+    .red-accent {
+        position: absolute;
+        top: 0;
+        display: block;
+        right: 0;
+        width: 120px;
+        height: 100%;
+        background: linear-gradient(135deg, #ff3a3a, #c20000);
+        z-index: 0;
+        transform: skewX(-12deg) translateX(60px);
+        box-shadow: -10px 0 30px rgba(194, 0, 0, 0.15);
+    }
+
+    .content-wrapper {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 1200px;
+    }
+
+    .zoneheader-container {
+        margin-bottom: 40px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .zoneheader {
+        display: inline-block;
+        background: linear-gradient(135deg, #ff3a3a, #c20000);
+        color: white;
+        padding: 14px 40px;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        border-radius: 8px;
+        box-shadow: 0 10px 25px rgba(194, 0, 0, 0.25);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .zoneheader::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transform: translateX(-100%);
+        animation: shine 3s infinite;
+    }
+
+    @keyframes shine {
+        100% {
+            transform: translateX(100%);
+        }
+    }
+
+    .description {
+        font-size: 22px;
+        font-weight: 500;
+        color: #333;
+        margin-bottom: 60px;
+
+        max-width: 70%;
+        line-height: 1.5;
+    }
+
+    .product-name {
+        font-weight: 700;
+        color: #c20000;
+        position: relative;
+        display: inline-block;
+    }
+
+    .product-name::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #c20000;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease;
+    }
+
+    .product-name:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+    .icons-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px 40px;
+        width: 100%;
+        max-width: 1000px;
+        padding: 0 25px;
+    }
+
+    .icon-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .instru_list {
+        padding: 5px;
+    }
+
+    .icon {
+        height: 100px;
+        width: 100px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f8f8f8;
+        border-radius: 50%;
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .icon::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        background: linear-gradient(135deg, rgba(255, 58, 58, 0.1), rgba(194, 0, 0, 0.05));
+        border-radius: 50%;
+        opacity: 0;
+        transform: scale(0.8);
+        transition: all 0.4s ease;
+    }
+
+    .icon-item:hover .icon {
+        box-shadow: 0 15px 30px rgba(194, 0, 0, 0.15);
+    }
+
+    .icon-item:hover .icon::before {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .icon img {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+        transition: transform 0.4s ease;
+        filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
+    }
+
+    .icon-item:hover .icon img {
+        transform: scale(1.1);
+    }
+
+    .icon-label {
+        font-weight: 600;
+        font-size: 20px;
+        color: #333;
+        transition: all 0.3s ease;
+        position: relative;
+        padding-bottom: 8px;
+    }
+
+    .icon-label::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background-color: #c20000;
+        transform: translateX(-50%);
+        transition: width 0.3s ease;
+    }
+
+    .icon-item:hover .icon-label {
+        color: #c20000;
+    }
+
+    .icon-item:hover .icon-label::after {
+        width: 40px;
+    }
+
+    @media (max-width: 900px) {
+        .icons-grid {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 700px;
+            gap: 40px 30px;
+        }
+
+        .description {
+            max-width: 85%;
+            font-size: 20px;
+        }
+
+        .zoneheader {
+            font-size: 24px;
+            padding: 12px 30px;
+        }
+
+        .red-accent {
+            width: 100px;
+            visibility: hidden;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .application-section {
+            padding: 60px 15px;
+        }
+
+        .specs-image{
+            width: 6rem;
+        }
+
+        .icons-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .description {
+            max-width: 100%;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .zoneheader {
+            font-size: 22px;
+            padding: 10px 25px;
+        }
+
+        .red-accent {
+            width: 0px;
+            visibility: hidden;
+        }
+    }
+
+    .spec-details-parent {
+        width: 50%;
     }
 
 
 
 
-    </style>
 
-    <section class="faq" id="faq">
-        <div class="container">
-            <div class="section-title">
-                <h2 data-lang="faq_title">Frequently Asked Questions</h2>
-                <p data-lang="faq_desc">Find answers to common questions about Destrouch Gel</p>
-            </div>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3 data-lang="faq_q1">Is Destrouch Gel safe to use around children and pets?</h3>
-                        <span>+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p data-lang="faq_a1">
-                            While Destrouch Gel uses natural ingredients, we recommend keeping it out of reach of children and pets. Apply in areas that are not accessible to them, and always wash hands after handling the product.
-                        </p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3 data-lang="faq_q2">How long does one tube of Destrouch Gel last?</h3>
-                        <span>+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p data-lang="faq_a2">
-                            One tube of Destrouch Gel contains enough product to treat an average-sized home (approximately 1,500 sq ft). The gel remains effective for up to 3 months after application.
-                        </p>
-                    </div>
-                </div>
-              <div class="faq-item">
-    <div class="faq-question">
-        <h3 data-lang="faq_q3">where can you use our products?</h3>
-        <span>+</span>
-    </div>
-    <div class="faq-answer">
-        <div data-lang="faq_a3" style="padding-bottom: 15px;">
-            <p  style="font-size: 14px; color: #555;">
-                DESTROUCH GEL is effective everywhere cockroaches hide, including:
-            </p>
-            <ol  style="font-size: 14px; color: #555; margin-left: 20px;">
-                <li>Homes</li>
-                <li>Apartment buildings</li>
-                <li>Hotels</li>
-                <li>Offices</li>
-                <li>Warehouses</li>
-                <li>Factories</li>
-            </ol>
+    .img-footer-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 40px;
+    }
 
+
+    .footer-logo-image {
+        max-width: 50px;
+        height: auto;
+        display: inline-block;
+    }
+
+    .info {
+        flex-grow: 1;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .info h2 {
+        margin: 0;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .info p {
+        margin: 5px 0;
+        font-size: 10px;
+    }
+
+    @media (max-width: 429px) {
+
+        .icons-grid {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 30px;
+        }
+    }
+
+    .center-box {
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+
+</style>
+
+<section class="faq" id="faq">
+    <div class="container">
+        <div class="section-title">
+            <h2 data-lang="faq_title">Frequently Asked Questions</h2>
+            <p data-lang="faq_desc">Find answers to common questions about Destrouch Gel</p>
         </div>
-       
-    </div>
-</div>
-
-            </div>
-        </div>
-    </section>
-    
-
-    <section class="order" id="order">
-        <div class="container order-container">
-            <div class="order-content">
-                <h2 data-lang="order_title">Get Your Destrouch Gel Today</h2>
-                <p data-lang="order_desc">
-                    Destrouch Gel: An effective solution for cockroach control at a competitive price.
-Destrouch Gel, created especially for your convenience, will give you a professional cockroach control experience for as long as possible. 
-Place your order right away to permanently eliminate your cockroach issues.
-                </p>
-                <div class="price-tag"><span></span>690DA</div>
-                <div class="guarantee">
-                    <div class="guarantee-icon">✓</div>
-                    <p class="guarantee-text" data-lang="order_guarantee">
-                        100% Satisfaction Guarantee. If you're not completely satisfied with the results, we offer a 30-day money-back guarantee.
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3 data-lang="faq_q1">Is Destrouch Gel safe to use around children and pets?</h3>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p data-lang="faq_a1">
+                        While Destrouch Gel uses natural ingredients, we recommend keeping it out of reach of children
+                        and pets. Apply in areas that are not accessible to them, and always wash hands after handling
+                        the product.
                     </p>
                 </div>
             </div>
-            <div class="order-form">
-                <h3 class="form-title" data-lang="order_form_title">Place Your Order</h3>
-                <form id="order-form">
-                    <div class="form-group">
-                        <label class="form-label" for="nom" data-lang="order_lastname">First Name</label>
-                        <input type="text" class="form-control" id="nom"  required>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3 data-lang="faq_q2">How long does one tube of Destrouch Gel last?</h3>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p data-lang="faq_a2">
+                        One tube of Destrouch Gel contains enough product to treat an average-sized home (approximately
+                        1,500 sq ft). The gel remains effective for up to 3 months after application.
+                    </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3 data-lang="faq_q3">where can you use our products?</h3>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <div data-lang="faq_a3" style="padding-bottom: 15px;">
+                        <p style="font-size: 14px; color: #555;">
+                            DESTROUCH GEL is effective everywhere cockroaches hide, including:
+                        </p>
+                        <ol style="font-size: 14px; color: #555; margin-left: 20px;">
+                            <li>Homes</li>
+                            <li>Apartment buildings</li>
+                            <li>Hotels</li>
+                            <li>Offices</li>
+                            <li>Warehouses</li>
+                            <li>Factories</li>
+                        </ol>
+
                     </div>
-                    <div class="form-group">
-                        <label class="form-label" for="prenom" data-lang="order_firstname">Last Name</label>
-                        <input type="text" class="form-control" id="prenom"  required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="phone_number" data-lang="order_phone">Phone Number</label>
-                        <input type="tel" class="form-control" id="phone_number"  required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="wilaya" data-lang="order_region">Wilaya (Region)</label>
-                        <!-- <input type="text" class="form-control" id="wilaya"  required> -->
-                        <div class="select-container">
-                            
-                            <select name="wilaya" id="wilaya" required>
-                              <option value="" disabled selected>Select a wilaya...</option>
-                              <option value="Adrar">1 - Adrar</option>
-                              <option value="Chlef">2 - Chlef</option>
-                              <option value="Laghouat">3 - Laghouat</option>
-                              <option value="Oum El Bouaghi">4 - Oum El Bouaghi</option>
-                              <option value="Batna">5 - Batna</option>
-                              <option value="Béjaïa">6 - Béjaïa</option>
-                              <option value="Biskra">7 - Biskra</option>
-                              <option value="Béchar">8 - Béchar</option>
-                              <option value="Blida">9 - Blida</option>
-                              <option value="Bouira">10 - Bouira</option>
-                              <option value="Tamanrasset">11 - Tamanrasset</option>
-                              <option value="Tébessa">12 - Tébessa</option>
-                              <option value="Tlemcen">13 - Tlemcen</option>
-                              <option value="Tiaret">14 - Tiaret</option>
-                              <option value="Tizi Ouzou">15 - Tizi Ouzou</option>
-                              <option value="Alger">16 - Alger (Algiers)</option>
-                              <option value="Djelfa">17 - Djelfa</option>
-                              <option value="Jijel">18 - Jijel</option>
-                              <option value="Sétif">19 - Sétif</option>
-                              <option value="Saïda">20 - Saïda</option>
-                              <option value="Skikda">21 - Skikda</option>
-                              <option value="Sidi Bel Abbès">22 - Sidi Bel Abbès</option>
-                              <option value="Annaba">23 - Annaba</option>
-                              <option value="Guelma">24 - Guelma</option>
-                              <option value="Constantine">25 - Constantine</option>
-                              <option value="Médéa">26 - Médéa</option>
-                              <option value="Mostaganem">27 - Mostaganem</option>
-                              <option value="M'Sila">28 - M'Sila</option>
-                              <option value="Mascara">29 - Mascara</option>
-                              <option value="Ouargla">30 - Ouargla</option>
-                              <option value="Oran">31 - Oran</option>
-                              <option value="El Bayadh">32 - El Bayadh</option>
-                              <option value="Illizi">33 - Illizi</option>
-                              <option value="Bordj Bou Arréridj">34 - Bordj Bou Arréridj</option>
-                              <option value="Boumerdès">35 - Boumerdès</option>
-                              <option value="El Tarf">36 - El Tarf</option>
-                              <option value="Tindouf">37 - Tindouf</option>
-                              <option value="Tissemsilt">38 - Tissemsilt</option>
-                              <option value="El Oued">39 - El Oued</option>
-                              <option value="Khenchela">40 - Khenchela</option>
-                              <option value="Souk Ahras">41 - Souk Ahras</option>
-                              <option value="Tipaza">42 - Tipaza</option>
-                              <option value="Mila">43 - Mila</option>
-                              <option value="Aïn Defla">44 - Aïn Defla</option>
-                              <option value="Naâma">45 - Naâma</option>
-                              <option value="Aïn Témouchent">46 - Aïn Témouchent</option>
-                              <option value="Ghardaïa">47 - Ghardaïa</option>
-                              <option value="Relizane">48 - Relizane</option>
-                              <option value="El M'Ghair">49 - El M'Ghair</option>
-                              <option value="El Menia">50 - El Menia</option>
-                              <option value="Ouled Djellal">51 - Ouled Djellal</option>
-                              <option value="Bordj Badji Mokhtar">52 - Bordj Badji Mokhtar</option>
-                              <option value="Béni Abbès">53 - Béni Abbès</option>
-                              <option value="Timimoun">54 - Timimoun</option>
-                              <option value="Touggourt">55 - Touggourt</option>
-                              <option value="Djanet">56 - Djanet</option>
-                              <option value="In Salah">57 - In Salah</option>
-                              <option value="In Guezzam">58 - In Guezzam</option>
-                            </select>
-                          </div>
-                    <div class="form-group">
-                        <label class="form-label" for="address" data-lang="order_address">Shipping Address</label>
-                        <textarea class="form-control" id="address" rows="3"  required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="quantity" data-lang="order_quantity">Quantity</label>
-                        <input type="number" class="form-control" id="quantity" min="1" value="1" required>
-                    </div>
-                    <button type="submit" class="btn btn-block" data-lang="order_submit">Complete Order</button>
-                </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="order" id="order">
+    <div class="container order-container">
+        <div class="order-content">
+            <h2 data-lang="order_title">Get Your Destrouch Gel Today</h2>
+            <p data-lang="order_desc">
+                Destrouch Gel: An effective solution for cockroach control at a competitive price.
+                Destrouch Gel, created especially for your convenience, will give you a professional cockroach control
+                experience for as long as possible.
+                Place your order right away to permanently eliminate your cockroach issues.
+            </p>
+            <div class="price-tag"><span></span>690DA</div>
+            <div class="guarantee">
+                <div class="guarantee-icon">✓</div>
+                <p class="guarantee-text" data-lang="order_guarantee">
+                    100% Satisfaction Guarantee. If you're not completely satisfied with the results, we offer a 30-day
+                    money-back guarantee.
+                </p>
             </div>
         </div>
-    </section>
-    
-
-   
-    <footer class="footer">
-<div class="footer-container">
-
-
-
-
-
-          <div class="img-footer-container">
-                    <div>
-                  
-                        <img src="https://i.ibb.co/7JBDLVbJ/logo-removebg-preview.png" alt="Algerian Flag" class="footer-logo-image">
-                 
-                    </div>
-                    <div class="info">
-                        <h4>🏢 Manufactured by : EL ZOUMOR LI EL HANDASA FILAHIA</h4>
-                        <h2>📍 Adresse : KEDADRA - MOSTAGANEM - ALGERIA</h2>
-                        <h2>📞 0560 20 00 90</h2>
-                    </div>
-                    <div >
-                    <img src="https://i.ibb.co/Wpfg7LrM/Picsart-25-03-29-18-18-44-841.png" alt="Company Logo" class="footer-logo-image">
-                 
+        <div class="order-form">
+            <h3 class="form-title" data-lang="order_form_title">Place Your Order</h3>
+            <form id="order-form">
+                <div class="form-group">
+                    <label class="form-label" data-lang="order_lastname" for="nom">First Name</label>
+                    <input class="form-control" id="nom" required type="text">
                 </div>
-          </div> 
-                <div class="footer-about">
-                    <a href="#" class="footer-logo">Destrouch</a>
-                    <p class="footer-text">For all cockroach problems, this high-quality gel offers an easy-to-apply and effective solution, free from harmful chemical additives..</p>
-                    <div class="footer-social">
-                        <a href="#" class="social-link">f</a>
-                        <a href="#" class="social-link">t</a>
-                        <a href="#" class="social-link">in</a>
-                        <a href="#" class="social-link">ig</a>
+                <div class="form-group">
+                    <label class="form-label" data-lang="order_firstname" for="prenom">Last Name</label>
+                    <input class="form-control" id="prenom" required type="text">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" data-lang="order_phone" for="phone_number">Phone Number</label>
+                    <input class="form-control" id="phone_number" required type="tel">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" data-lang="order_region" for="wilaya">Wilaya (Region)</label>
+                    <!-- <input type="text" class="form-control" id="wilaya"  required> -->
+                    <div class="select-container">
+
+                        <select id="wilaya" name="wilaya" required>
+                            <option disabled selected value="">Select a wilaya...</option>
+                            <option value="Adrar">1 - Adrar</option>
+                            <option value="Chlef">2 - Chlef</option>
+                            <option value="Laghouat">3 - Laghouat</option>
+                            <option value="Oum El Bouaghi">4 - Oum El Bouaghi</option>
+                            <option value="Batna">5 - Batna</option>
+                            <option value="Béjaïa">6 - Béjaïa</option>
+                            <option value="Biskra">7 - Biskra</option>
+                            <option value="Béchar">8 - Béchar</option>
+                            <option value="Blida">9 - Blida</option>
+                            <option value="Bouira">10 - Bouira</option>
+                            <option value="Tamanrasset">11 - Tamanrasset</option>
+                            <option value="Tébessa">12 - Tébessa</option>
+                            <option value="Tlemcen">13 - Tlemcen</option>
+                            <option value="Tiaret">14 - Tiaret</option>
+                            <option value="Tizi Ouzou">15 - Tizi Ouzou</option>
+                            <option value="Alger">16 - Alger (Algiers)</option>
+                            <option value="Djelfa">17 - Djelfa</option>
+                            <option value="Jijel">18 - Jijel</option>
+                            <option value="Sétif">19 - Sétif</option>
+                            <option value="Saïda">20 - Saïda</option>
+                            <option value="Skikda">21 - Skikda</option>
+                            <option value="Sidi Bel Abbès">22 - Sidi Bel Abbès</option>
+                            <option value="Annaba">23 - Annaba</option>
+                            <option value="Guelma">24 - Guelma</option>
+                            <option value="Constantine">25 - Constantine</option>
+                            <option value="Médéa">26 - Médéa</option>
+                            <option value="Mostaganem">27 - Mostaganem</option>
+                            <option value="M'Sila">28 - M'Sila</option>
+                            <option value="Mascara">29 - Mascara</option>
+                            <option value="Ouargla">30 - Ouargla</option>
+                            <option value="Oran">31 - Oran</option>
+                            <option value="El Bayadh">32 - El Bayadh</option>
+                            <option value="Illizi">33 - Illizi</option>
+                            <option value="Bordj Bou Arréridj">34 - Bordj Bou Arréridj</option>
+                            <option value="Boumerdès">35 - Boumerdès</option>
+                            <option value="El Tarf">36 - El Tarf</option>
+                            <option value="Tindouf">37 - Tindouf</option>
+                            <option value="Tissemsilt">38 - Tissemsilt</option>
+                            <option value="El Oued">39 - El Oued</option>
+                            <option value="Khenchela">40 - Khenchela</option>
+                            <option value="Souk Ahras">41 - Souk Ahras</option>
+                            <option value="Tipaza">42 - Tipaza</option>
+                            <option value="Mila">43 - Mila</option>
+                            <option value="Aïn Defla">44 - Aïn Defla</option>
+                            <option value="Naâma">45 - Naâma</option>
+                            <option value="Aïn Témouchent">46 - Aïn Témouchent</option>
+                            <option value="Ghardaïa">47 - Ghardaïa</option>
+                            <option value="Relizane">48 - Relizane</option>
+                            <option value="El M'Ghair">49 - El M'Ghair</option>
+                            <option value="El Menia">50 - El Menia</option>
+                            <option value="Ouled Djellal">51 - Ouled Djellal</option>
+                            <option value="Bordj Badji Mokhtar">52 - Bordj Badji Mokhtar</option>
+                            <option value="Béni Abbès">53 - Béni Abbès</option>
+                            <option value="Timimoun">54 - Timimoun</option>
+                            <option value="Touggourt">55 - Touggourt</option>
+                            <option value="Djanet">56 - Djanet</option>
+                            <option value="In Salah">57 - In Salah</option>
+                            <option value="In Guezzam">58 - In Guezzam</option>
+                        </select>
                     </div>
-                </div>
-        
-           
-                <div class="footer-links-column">
-                    <h3 class="footer-title">Contact</h3>
-                    <ul class="footer-links">
-                        <li class="footer-link"><a href="tel:0560200090">(+213) 0560200090</a></li>
-                        <li class="footer-link"><a href="#">Contact Form</a></li>
-                    </ul>
-                </div>
-
-
-     
-</div>
-
-        
-
-
-
-          
-            
-
-
-
-         
-
-
-        
-          
-
-               
-        
+                    <div class="form-group">
+                        <label class="form-label" data-lang="order_address" for="address">Shipping Address</label>
+                        <textarea class="form-control" id="address" required rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-lang="order_quantity" for="quantity">Quantity</label>
+                        <input class="form-control" id="quantity" min="1" required type="number" value="1">
+                    </div>
+                    <button class="btn btn-block" data-lang="order_submit" type="submit">Complete Order</button>
+            </form>
         </div>
-        <div class="copyright">
-            <div class="container">
-                <p>&copy; 2025 Destrouch Gel. All Rights Reserved.</p>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="footer-container">
+
+
+        <div class="img-footer-container">
+            <div>
+
+                <img alt="Algerian Flag" class="footer-logo-image"
+                     src="https://i.ibb.co/7JBDLVbJ/logo-removebg-preview.png">
+
+            </div>
+            <div class="info">
+                <h4>🏢 Manufactured by : EL ZOUMOR LI EL HANDASA FILAHIA</h4>
+                <h2>📍 Adresse : KEDADRA - MOSTAGANEM - ALGERIA</h2>
+                <h2>📞 0560 20 00 90</h2>
+            </div>
+            <div>
+                <img alt="Company Logo" class="footer-logo-image"
+                     src="https://i.ibb.co/Wpfg7LrM/Picsart-25-03-29-18-18-44-841.png">
+
             </div>
         </div>
-    </footer>
-    
+        <div class="footer-about">
+            <a class="footer-logo" href="#">Destrouch</a>
+            <p class="footer-text">For all cockroach problems, this high-quality gel offers an easy-to-apply and
+                effective solution, free from harmful chemical additives..</p>
+            <div class="footer-social">
+                <a class="social-link" href="#">f</a>
+                <a class="social-link" href="#">t</a>
+                <a class="social-link" href="#">in</a>
+                <a class="social-link" href="#">ig</a>
+            </div>
+        </div>
 
-    <script>
-    document.getElementById('order-form').addEventListener('submit', async function(event) {
-    event.preventDefault(); 
 
-    const orderData = {
-        nom: document.getElementById('nom').value,
-        prenom: document.getElementById('prenom').value,
-        phone_number: document.getElementById('phone_number').value,
-        wilaya: document.getElementById('wilaya').value,
-        address: document.getElementById('address').value,
-        quantity: document.getElementById('quantity').value
-    };
+        <div class="footer-links-column">
+            <h3 class="footer-title">Contact</h3>
+            <ul class="footer-links">
+                <li class="footer-link"><a href="tel:0560200090">(+213) 0560200090</a></li>
+                <li class="footer-link"><a href="#">Contact Form</a></li>
+            </ul>
+        </div>
 
-    console.log(JSON.stringify(Date.now()))
-    const response = await fetch('/order', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(orderData)
+
+    </div>
+
+
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <p>&copy; 2025 Destrouch Gel. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+    document.getElementById('order-form').addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        const orderData = {
+            nom: document.getElementById('nom').value,
+            prenom: document.getElementById('prenom').value,
+            phone_number: document.getElementById('phone_number').value,
+            wilaya: document.getElementById('wilaya').value,
+            address: document.getElementById('address').value,
+            quantity: document.getElementById('quantity').value
+        };
+
+        console.log(JSON.stringify(Date.now()))
+        const response = await fetch('/order', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(orderData)
+        });
+        console.log(response);
+
+        const result = await response.json();
+        alert(result.message || result.error);
     });
-    console.log(response);      
-
-    const result = await response.json();
-    alert(result.message || result.error);
-});
 
 
-    </script>       
-    <script>
-    
- 
+</script>
+<script>
 
 
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    navToggle.addEventListener('click', function () {
+        navMenu.classList.toggle('active');
+    });
 
 
-        const navToggle = document.getElementById('navToggle');
-        const navMenu = document.getElementById('navMenu');
-
-        navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-        });
-
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                navMenu.classList.remove('active');
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // FAQ Accordion
-        const faqItems = document.querySelectorAll('.faq-item');
-        
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-question');
-            
-            question.addEventListener('click', () => {
-                const isActive = item.classList.contains('active');
-                
-                // Close all FAQ items
-                faqItems.forEach(faqItem => {
-                    faqItem.classList.remove('active');
-                });
-                
-                // If the clicked item wasn't active, make it active
-                if (!isActive) {
-                    item.classList.add('active');
-                }
-            });
-        });
-
-        // Form Submission
-        document.getElementById('order-form').addEventListener('submit', function(e) {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const orderData = {
-                nom: document.getElementById('nom').value.trim(),
-                prenom: document.getElementById('prenom').value.trim(),
-                phone_number: document.getElementById('phone_number').value.trim(),
-                wilaya: document.getElementById('wilaya').value.trim(),
-                address: document.getElementById('address').value.trim(),
-                quantity: document.getElementById('quantity').value.trim()
-            };
-            for (const key in orderData) {
-                if (!orderData[key]) {
-                    alert('please fill all neccassary fields');
-                    return;
-        }
-    }
-    alert('thanks');
-    this.reset();
-});
+            navMenu.classList.remove('active');
 
-    </script>
-    <!--tarjma-->
-    <script>
-        const translations = {
-            en: {
-                home: "Home",
-        features: "Features",
-        specs: "Specifications",
-        
-        order: "Order Now",
-        hero_title: "Professional <span>Cockroach Killer</span> Gel Solution",
-        hero_desc: "Destrouch Gel is a highly effective insecticide designed to eradicate all species of cockroaches. Its natural formula ensures long-lasting results without harmful chemicals.",
-        order_now: "Order Now",
-        badge_only: "Only",
-        
-                features_title: "Precautions for use",
-                features_desc: "For safety reasons, do not apply to areas accessible to children and pets. Wash your hands after each use.",
-                
-                specs_title: "Technical Specifications",
-                specs_composition: "Composition",
-                specs_aspect: "Aspect & Color:",
-                specs_brown_gel: "Brown Gel",
-                specs_active: "Active Ingredient:",
-                specs_oleandrine: "Oleandrine (Laurier-Rose)",
-                specs_attractants: "Attractants:",
-                specs_eggs_sugar: "Eggs, Sugar",
-                specs_base: "Base:",
-                specs_water: "Water",
-                
-                specs_usage: "Usage Instructions",
-                specs_step1: "Remove the cap carefully.",
-                specs_step2: "Apply small drops (approx. 3mm diameter) to affected areas.",
-                specs_step3: "Close the cap after each use.",
-                specs_step4: "Use the product within 6 months of opening.",
-                
-                specs_precautions: "Precautions",
-                specs_safe_children: "Keep out of reach of children and pets.",
-                specs_wash_hands: "Wash hands thoroughly after use.",
-                specs_store: "Store in a cool, dry place away from direct sunlight.",
-                order_title: "Get Your Destrouch Gel Today",
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            // Close all FAQ items
+            faqItems.forEach(faqItem => {
+                faqItem.classList.remove('active');
+            });
+
+            // If the clicked item wasn't active, make it active
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+
+    // Form Submission
+    document.getElementById('order-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const orderData = {
+            nom: document.getElementById('nom').value.trim(),
+            prenom: document.getElementById('prenom').value.trim(),
+            phone_number: document.getElementById('phone_number').value.trim(),
+            wilaya: document.getElementById('wilaya').value.trim(),
+            address: document.getElementById('address').value.trim(),
+            quantity: document.getElementById('quantity').value.trim()
+        };
+        for (const key in orderData) {
+            if (!orderData[key]) {
+                alert('please fill all neccassary fields');
+                return;
+            }
+        }
+        alert('thanks');
+        this.reset();
+    });
+
+</script>
+<!--tarjma-->
+<script>
+    const translations = {
+        en: {
+            home: "Home",
+            features: "Features",
+            specs: "Specifications",
+
+            order: "Order Now",
+            hero_title: "Professional <span>Cockroach Killer</span> Gel Solution",
+            hero_desc: "Destrouch Gel is a highly effective insecticide designed to eradicate all species of cockroaches. Its natural formula ensures long-lasting results without harmful chemicals.",
+            order_now: "Order Now",
+            badge_only: "Only",
+
+            features_title: "Precautions for use",
+            features_desc: "For safety reasons, do not apply to areas accessible to children and pets. Wash your hands after each use.",
+
+            specs_title: "Technical Specifications",
+            specs_composition: "Composition",
+            specs_aspect: "Aspect & Color:",
+            specs_brown_gel: "Brown Gel",
+            specs_active: "Active Ingredient:",
+            specs_oleandrine: "Oleandrine (Laurier-Rose)",
+            specs_attractants: "Attractants:",
+            specs_eggs_sugar: "Eggs, Sugar",
+            specs_base: "Base:",
+            specs_water: "Water",
+
+            specs_usage: "Usage Instructions",
+            specs_step1: "Remove the cap carefully.",
+            specs_step2: "Apply small drops (approx. 3mm diameter) to affected areas.",
+            specs_step3: "Close the cap after each use.",
+            specs_step4: "Use the product within 6 months of opening.",
+
+            specs_precautions: "Precautions",
+            specs_safe_children: "Keep out of reach of children and pets.",
+            specs_wash_hands: "Wash hands thoroughly after use.",
+            specs_store: "Store in a cool, dry place away from direct sunlight.",
+            order_title: "Get Your Destrouch Gel Today",
             order_desc: "Experience professional-grade cockroach elimination with our specially formulated gel. Order now and say goodbye to cockroach problems for good.",
             order_guarantee: "100% Satisfaction Guarantee. If you're not completely satisfied with the results, we offer a 30-day money-back guarantee.",
             order_form_title: "Place Your Order",
@@ -1863,51 +1892,51 @@ Place your order right away to permanently eliminate your cockroach issues.
             order_desc: "Experience professional-grade cockroach elimination with our specially formulated gel. Order now and say goodbye to cockroach problems for good.",
             order_guarantee: "100% Satisfaction Guarantee. If you're not completely satisfied with the results, we offer a 30-day money-back guarantee.",
             footer_desc: "Professional-grade cockroach elimination solution that's safe, effective, and easy to use.",
-                zone_title:"Application zone",
-                zone_label1:"Warehouses",
-                zone_label2:"buildings",
-                zone_label3:"Offices",
-                zone_label4:"Houses",
-                zone_label5:"Factory",
-                zone_label6:"Hotles"
+            zone_title: "Application zone",
+            zone_label1: "Warehouses",
+            zone_label2: "buildings",
+            zone_label3: "Offices",
+            zone_label4: "Houses",
+            zone_label5: "Factory",
+            zone_label6: "Hotles"
 
 
-            },
-            ar: {
-                home: "الرئيسية",
-        features: "المميزات",
-        specs: "المواصفات",
-        
-        order: "اطلب الآن",
-        hero_title: "حل <span>مبيد الصراصير</span> المهني",
-        hero_desc: "جل ديستروش هو مبيد حشري عالي الفعالية مصمم للقضاء على جميع أنواع الصراصير. صيغته الطبيعية تضمن نتائج طويلة الأمد بدون مواد كيميائية ضارة.",
-        order_now: "اطلب الآن",
-        badge_only: "فقط",
-                features_title: "احتياطات الاستخدام",
-                features_desc: "لأسباب تتعلق بالسلامة، لا تقم بتطبيقه في الأماكن التي يمكن للأطفال والحيوانات الأليفة الوصول إليها. اغسل يديك بعد كل استخدام.",
-    
-                specs_title: "المواصفات التقنية",
-                specs_composition: "التكوين",
-                specs_aspect: "المظهر واللون:",
-                specs_brown_gel: "جل بني",
-                specs_active: "المادة الفعالة:",
-                specs_oleandrine: "أولياندرين (الغار الوردي)",
-                specs_attractants: "المواد الجاذبة:",
-                specs_eggs_sugar: "بيض، سكر",
-                specs_base: "القاعدة:",
-                specs_water: "الماء",
-    
-                specs_usage: "تعليمات الاستخدام",
-                specs_step1: "قم بإزالة الغطاء بعناية.",
-                specs_step2: "ضع قطرات صغيرة (بقطر حوالي 3 مم) في المناطق المصابة.",
-                specs_step3: "أغلق الغطاء بعد كل استخدام.",
-                specs_step4: "استخدم المنتج خلال 6 أشهر من الفتح.",
-    
-                specs_precautions: "الاحتياطات",
-                specs_safe_children: "احفظه بعيدًا عن متناول الأطفال والحيوانات الأليفة.",
-                specs_wash_hands: "اغسل يديك جيدًا بعد الاستخدام.",
-                specs_store: "احفظه في مكان بارد وجاف بعيدًا عن أشعة الشمس المباشرة.",
-                order_title: "احصل على جل ديستروش اليوم",
+        },
+        ar: {
+            home: "الرئيسية",
+            features: "المميزات",
+            specs: "المواصفات",
+
+            order: "اطلب الآن",
+            hero_title: "حل <span>مبيد الصراصير</span> المهني",
+            hero_desc: "جل ديستروش هو مبيد حشري عالي الفعالية مصمم للقضاء على جميع أنواع الصراصير. صيغته الطبيعية تضمن نتائج طويلة الأمد بدون مواد كيميائية ضارة.",
+            order_now: "اطلب الآن",
+            badge_only: "فقط",
+            features_title: "احتياطات الاستخدام",
+            features_desc: "لأسباب تتعلق بالسلامة، لا تقم بتطبيقه في الأماكن التي يمكن للأطفال والحيوانات الأليفة الوصول إليها. اغسل يديك بعد كل استخدام.",
+
+            specs_title: "المواصفات التقنية",
+            specs_composition: "التكوين",
+            specs_aspect: "المظهر واللون:",
+            specs_brown_gel: "جل بني",
+            specs_active: "المادة الفعالة:",
+            specs_oleandrine: "أولياندرين (الغار الوردي)",
+            specs_attractants: "المواد الجاذبة:",
+            specs_eggs_sugar: "بيض، سكر",
+            specs_base: "القاعدة:",
+            specs_water: "الماء",
+
+            specs_usage: "تعليمات الاستخدام",
+            specs_step1: "قم بإزالة الغطاء بعناية.",
+            specs_step2: "ضع قطرات صغيرة (بقطر حوالي 3 مم) في المناطق المصابة.",
+            specs_step3: "أغلق الغطاء بعد كل استخدام.",
+            specs_step4: "استخدم المنتج خلال 6 أشهر من الفتح.",
+
+            specs_precautions: "الاحتياطات",
+            specs_safe_children: "احفظه بعيدًا عن متناول الأطفال والحيوانات الأليفة.",
+            specs_wash_hands: "اغسل يديك جيدًا بعد الاستخدام.",
+            specs_store: "احفظه في مكان بارد وجاف بعيدًا عن أشعة الشمس المباشرة.",
+            order_title: "احصل على جل ديستروش اليوم",
             order_desc: "احصل على تجربة القضاء على الصراصير بمنتجنا الاحترافي. اطلب الآن وقل وداعًا لمشاكل الصراصير نهائيًا.",
             order_guarantee: "ضمان الرضا 100٪. إذا لم تكن راضيًا تمامًا عن النتائج، فإننا نقدم ضمان استعادة الأموال خلال 30 يومًا.",
             order_form_title: "قم بتقديم طلبك",
@@ -1927,77 +1956,77 @@ Place your order right away to permanently eliminate your cockroach issues.
             faq_desc: "اعثر على إجابات للأسئلة الشائعة حول جل ديستروش",
             faq_q1: "هل جل ديستروش آمن للاستخدام حول الأطفال والحيوانات الأليفة؟",
             faq_a1: "على الرغم من أن جل ديستروش يستخدم مكونات طبيعية، نوصي بإبقائه بعيدًا عن متناول الأطفال والحيوانات الأليفة...",
-                faq_q2: "كم تدوم مدة استخدام جل ديستروش؟",
-               faq_a2: "يمكن استخدام المنتج حتى 3 اشهر في منزل متوسط الحجم ",
-                faq_q3: "ماهي اماكن استعمال هذا المنتج",
-                faq_a3: "جل ديستروش فعال في كل مكان تختبئ فيه الصراصير، بما في ذلك:\n" +
-                    "\n" +
-                    "المنازل\n" +
-                    "\n" +
-                    "المباني السكنية\n" +
-                    "\n" +
-                    "الفنادق\n" +
-                    "\n" +
-                    "المكاتب\n" +
-                    "\n" +
-                    "المستودعات\n" +
-                    "\n" +
-                    "المصانع ",
+            faq_q2: "كم تدوم مدة استخدام جل ديستروش؟",
+            faq_a2: "يمكن استخدام المنتج حتى 3 اشهر في منزل متوسط الحجم ",
+            faq_q3: "ماهي اماكن استعمال هذا المنتج",
+            faq_a3: "جل ديستروش فعال في كل مكان تختبئ فيه الصراصير، بما في ذلك:\n" +
+                "\n" +
+                "المنازل\n" +
+                "\n" +
+                "المباني السكنية\n" +
+                "\n" +
+                "الفنادق\n" +
+                "\n" +
+                "المكاتب\n" +
+                "\n" +
+                "المستودعات\n" +
+                "\n" +
+                "المصانع ",
 
 
-                zone_title:"مناطق التطبيق",
-                zone_label1:"مستودعات",
-                zone_label2:"البنايات",
-                zone_label3:"المكاتب",
-                zone_label4:"المنازل",
-                zone_label5:"المصانع",
-                zone_label6:"الفنادق"
-            }
-        };
-    
-        function changeLanguage(lang) {
-            document.querySelectorAll("[data-lang]").forEach(element => {
-                const key = element.getAttribute("data-lang");
-                element.innerHTML = translations[lang][key] || element.innerHTML;
-            });
-    
-            document.body.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
-            document.body.setAttribute("lang", lang);
+            zone_title: "مناطق التطبيق",
+            zone_label1: "مستودعات",
+            zone_label2: "البنايات",
+            zone_label3: "المكاتب",
+            zone_label4: "المنازل",
+            zone_label5: "المصانع",
+            zone_label6: "الفنادق"
         }
-    
-        document.getElementById("lang-en").addEventListener("click", () => changeLanguage("en"));
-        document.getElementById("lang-ar").addEventListener("click", () => changeLanguage("ar"));
-    </script>
+    };
 
-
-    <script>
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Set default language
-    let currentLang = 'en';
-    updateActiveLanguageButton(currentLang);
-    
-    // Language toggle listeners
-    document.getElementById('lang-en').addEventListener('click', function() {
-        changeLanguage('en');
-        updateActiveLanguageButton('en');
-    });
-    
-    document.getElementById('lang-ar').addEventListener('click', function() {
-        changeLanguage('ar');
-        updateActiveLanguageButton('ar');
-    });
-    
-    function updateActiveLanguageButton(lang) {
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.remove('active');
+    function changeLanguage(lang) {
+        document.querySelectorAll("[data-lang]").forEach(element => {
+            const key = element.getAttribute("data-lang");
+            element.innerHTML = translations[lang][key] || element.innerHTML;
         });
-        document.getElementById('lang-' + lang).classList.add('active');
-        currentLang = lang;
+
+        document.body.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+        document.body.setAttribute("lang", lang);
     }
-});
-    </script>
-    
-    
+
+    document.getElementById("lang-en").addEventListener("click", () => changeLanguage("en"));
+    document.getElementById("lang-ar").addEventListener("click", () => changeLanguage("ar"));
+</script>
+
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Set default language
+        let currentLang = 'en';
+        updateActiveLanguageButton(currentLang);
+
+        // Language toggle listeners
+        document.getElementById('lang-en').addEventListener('click', function () {
+            changeLanguage('en');
+            updateActiveLanguageButton('en');
+        });
+
+        document.getElementById('lang-ar').addEventListener('click', function () {
+            changeLanguage('ar');
+            updateActiveLanguageButton('ar');
+        });
+
+        function updateActiveLanguageButton(lang) {
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById('lang-' + lang).classList.add('active');
+            currentLang = lang;
+        }
+    });
+</script>
+
+
 </body>
 </html>
