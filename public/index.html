@@ -282,16 +282,22 @@
         }
 
 
+        .instru-destrouchGel-container {
+            display: inline-flex;
+            flex-direction: column;
+
+            gap: 10px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         .choose-destrouchGel-container {
             display: inline-flex;
             flex-direction: row;
             gap: 10px;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
         }
-
-
-        /* Features Section */
         .features {
             padding: 80px 0;
             background-color: var(--pure-white);
@@ -565,7 +571,7 @@
         .spec-details-img {
             width: 50%;
             display: flex;
-            flex-direction: column-reverse;
+            flex-direction: row-reverse;
             justify-content: center;
             align-items: center;
         }
@@ -875,7 +881,9 @@
 
             .choose-destrouchGel-container {
                 flex-direction: column;
+
             }
+
 
             .spec-details-img{
                 display: flex;
@@ -987,13 +995,14 @@
     </div>
 </section>
 
+
 <section  class="specs" id="specs" style="position: relative;">
 
     <div  class="container specs-container">
         <div  class="specs-content">
             <h2 data-lang="specs_title">Technical Specifications</h2>
             <div class="specs-list">
-                <div class="spec-item">
+                <div  class="spec-item">
                     <h3 class="spec-title" data-lang="specs_usage">Composition</h3>
                     <table border="1"
                            style="border-collapse: collapse; width: 100%; text-align: center; font-family: Arial, sans-serif;">
@@ -1017,13 +1026,11 @@
                         </tr>
                         </tbody>
                     </table>
-                    <img style="width: 18rem;align-self: center" src="https://i.ibb.co/9HsZ9Ft4/Whats-App-Image-2025-01-22-15-25-33-8e9e395b.png" />
-
                     <h4>Foarmat: -Seringue de 40 ml</h4>
                 </div>
 
-                <div class="choose-destrouchGel-container">
-                    <div class="instru_list">
+                <div  class="choose-destrouchGel-container">
+                    <div  class="instru_list">
                         <h3 class="askqus"> Why choose DESTROUCH GEL? </h3>
                         <ul style="padding: 15px">
                             <li>Effective elimination of all cockroach species</li>
@@ -1031,8 +1038,16 @@
                             <li>Long-lasting action</li>
                             <li>Easy to apply with a practical applicator syringe</li>
                             <li>Formulated without harmful chemicals</li>
-
                         </ul>
+
+                    </div>
+                    <div class="spec-details-img">
+                        <img style="width: 18rem;align-self: end;margin-right: 60px" src="https://i.ibb.co/9HsZ9Ft4/Whats-App-Image-2025-01-22-15-25-33-8e9e395b.png" />
+                    </div>
+                </div>
+
+                <div class="instru-destrouchGel-container">
+                    <div  class="instru_list">
                         <h3 class="spec-title" data-lang="specs_usage">Instructions for Use</h3>
                         <div class="instru_list">
                             <li style="list-style: none"> Applying DESTROUCH GEL is simple:</li>
@@ -1065,10 +1080,11 @@
 
         </div>
     </div>
-    </div>
 
-    </div>
+
 </section>
+
+
 <section class="application-section" style="background-color:var(--off-white);">
     <div class="red-accent"></div>
     <div class="content-wrapper">
@@ -1303,6 +1319,7 @@
 
     .instru_list {
         padding: 5px;
+        align-self: start;
     }
 
     .icon {
