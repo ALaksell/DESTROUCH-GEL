@@ -197,6 +197,7 @@
             font-size: 1.1rem;
             color: var(--medium-gray);
             margin-bottom: 30px;
+
         }
 
         .hero-image {
@@ -823,10 +824,19 @@
             .hero-content {
                 min-height: 100vh;
                 display: flex;
+
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
+            }
+            .hero-content h1{
+                align-self: start;
+            }
 
+            .hero-content h3{
+                align-self: start;
+                margin-top: 1rem;
+                margin-bottom: 0.5rem;
             }
 
             .brand-title {
@@ -862,9 +872,7 @@
 
             }
 
-            .hero-content h1 {
-                font-size: 2.2rem;
-            }
+
 
 
             .section-title h2 {
@@ -1196,7 +1204,10 @@
             .application-section {
                 padding: 60px 15px;
             }
-
+            .hero-content h1 {
+                font-size: 2.2rem;
+                align-self: start;
+            }
             .specs-image{
                 width: 6rem;
             }
@@ -1299,9 +1310,13 @@
 
 
         .registration-list {
-            list-style-type: none;
+
+
             margin-bottom: 2rem;
+
         }
+
+
 
         .registration-item {
             position: relative;
@@ -1314,14 +1329,7 @@
             border-bottom: none;
         }
 
-        .registration-list li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #555;
-            font-size: 1.5rem;
-            line-height: 1;
-        }
+
 
 
         .emergency-notice {
@@ -1525,13 +1533,13 @@
 
         <div class="hero-content">
 
-            <h1 data-lang="hero_title">DESTROUCH GEL <span>Cockroach Killer</span></h1>
-            <span><h3>Eliminate cockroaches permanently with a natural solution with proven effectiveness.</h3></span>
-            <span><p><p data-lang="hero_desc">DESTROUCH GEL is an insecticide specially designed to eradicate all species of cockroaches. Its unique formula, based on natural ingredients, ensures effective and long-lasting elimination of these pests without the use of harsh chemicals.</p></span>
-            </p>
+          <h1 data-lang="hero_title">DESTROUCH GEL <span>Cockroach Killer</span></h1>
+           <h3 data-lang="hero_intro">Eliminate cockroaches permanently with a natural solution with proven effectiveness.</h3>
+            <p data-lang="hero_desc">DESTROUCH GEL is an insecticide specially designed to eradicate all species of cockroaches. Its unique formula, based on natural ingredients, ensures effective and long-lasting elimination of these pests without the use of harsh chemicals.</p>
+
             <div style="display: flex;justify-content:space-between;align-items: center;width: 100%;">
                 <a class="btn" data-lang="order_now" href="#order">Order Now</a>
-                <img src="https://i.ibb.co/qYHzyHPs/Picsart-25-04-03-23-55-20-481.png"
+                <img alt="bata" src="https://i.ibb.co/qYHzyHPs/Picsart-25-04-03-23-55-20-481.png"
                      style="width: 85px;height: auto;"/>
             </div>
 
@@ -1578,18 +1586,18 @@
                         </tr>
                         </tbody>
                     </table>
-                    <h4>Foarmat: -Seringue de 40 ml</h4>
+                    <h4 data-lang="dosage">Foarmat: -Seringue de 40 ml</h4>
                 </div>
 
                 <div   class="choose-destrouchGel-container">
                     <div  class="instru_list">
-                        <h3 class="askqus"> Why choose DESTROUCH GEL? </h3>
-                        <ul style="padding: 15px">
-                            <li>Effective elimination of all cockroach species</li>
-                            <li>Formula based on natural ingredients (OLEANDRINE )</li>
-                            <li>Long-lasting action</li>
-                            <li>Easy to apply with a practical applicator syringe</li>
-                            <li>Formulated without harmful chemicals</li>
+                        <h3  class="askqus" data-lang="askqus"> Why choose DESTROUCH GEL? </h3>
+                        <ul  style="padding: 15px">
+                            <li data-lang="askqusLi1">Effective elimination of all cockroach species</li>
+                            <li data-lang="askqusLi2">Formula based on natural ingredients (OLEANDRINE )</li>
+                            <li data-lang="askqusLi3">Long-lasting action</li>
+                            <li data-lang="askqusLi4">Easy to apply with a practical applicator syringe</li>
+                            <li data-lang="askqusLi5">Formulated without harmful chemicals</li>
                         </ul>
 
                     </div>
@@ -1602,14 +1610,14 @@
                     <div  class="instru_list">
                         <h3 class="spec-title" data-lang="specs_usage">Instructions for Use</h3>
                         <div class="instru_list">
-                            <li style="list-style: none"> Applying DESTROUCH GEL is simple:</li>
+                            <li data-lang="instru_title" style="list-style: none"> Applying DESTROUCH GEL is simple:</li>
                             <ul style="padding: 15px">
-                                <li>Carefully remove the cap</li>
-                                <li>Formula based on natural ingredients (OLEANDRINE )</li>
-                                <li>Place drops (approximately 5 mm in diameter) on the affected areas. The number of
+                                <li data-lang="instruLi1" >Carefully remove the cap</li>
+
+                                <li data-lang="instruLi2">Place drops (approximately 5 mm in diameter) on the affected areas. The number of
                                     droplets depends on the severity of the insect infestation.
                                 </li>
-                                <li>Close after each use.</li>
+                                <li data-lang="instruLi3">Close after each use.</li>
                             </ul>
 
 
@@ -1733,19 +1741,19 @@
 
 <section class="inapi-section">
     <div class="registration-container">
-        <h2 class="registration-title">Registration Information</h2>
+        <h2 data-lang="reginfo_title" class="registration-title">Registration Information</h2>
         <ul class="registration-list">
-            <li class="registration-item">
+            <li  data-lang="reginfoLi1" class="registration-item">
                 Registration of the formula with the C.A.P. department of Algiers
             </li>
-            <li class="registration-item">
+            <li data-lang="reginfoLi2" class="registration-item">
                 Registration of the trademark with INAPI (Algerian National Institute of Industrial Property) under number 23384
             </li>
         </ul>
-        <div class="emergency-notice">
+        <div  class="emergency-notice">
             <div class="emergency-icon">⚠️</div>
             <div class="emergency-content">
-                <h3>In case of emergency, call poison control center (10 32)</h3>
+                <h3 data-lang="reginfoEMg">In case of emergency, call poison control center (10 32)</h3>
             </div>
         </div>
     </div>
@@ -1792,7 +1800,7 @@
                 </div>
                 <div class="faq-answer">
                     <div data-lang="faq_a3" style="padding-bottom: 15px;">
-                        <p style="font-size: 14px; color: #555;">
+                        <p>
                             In case of ingestion, call 1032, as our product is registered with the National Poison Control Center, or go immediately to a doctor or veterinarian, showing the product package.
                         </p>
                     </div>
@@ -2115,6 +2123,7 @@
 
             order: "Order Now",
             hero_title: "Professional <span>Cockroach Killer</span> Gel Solution",
+            hero_intro: "Eliminate cockroaches permanently with a natural solution with proven effectiveness.",
             hero_desc: "Destrouch Gel is a highly effective insecticide designed to eradicate all species of cockroaches. Its natural formula ensures long-lasting results without harmful chemicals.",
             order_now: "Order Now",
             badge_only: "Only",
@@ -2163,8 +2172,10 @@
             faq_desc: "Find answers to common questions about Destrouch Gel",
             faq_q1: "Is Destrouch Gel safe to use around children and pets?",
             faq_a1: "While Destrouch Gel uses natural ingredients, we recommend keeping it out of reach of children and pets. Apply in areas that are not accessible to them, and always wash hands after handling the product.",
-            faq_q2: "How long does one tube of Destrouch Gel last?",
+            faq_q2: "How often should I apply DESTROUCH GEL ?",
             faq_a2: "One tube of Destrouch Gel contains enough product to treat an average-sized home (approximately 1,500 sq ft). The gel remains effective for up to 3 months after application.",
+            faq_q3:"What should I do if my child or pet swallows DESTROUCH GEL ?",
+            faq_a3:"In case of ingestion, call 1032, as our product is registered with the National Poison Control Center, or go immediately to a doctor or veterinarian, showing the product package.",
             order_title: "Get Your Destrouch Gel Today",
             order_desc: "Experience professional-grade cockroach elimination with our specially formulated gel. Order now and say goodbye to cockroach problems for good.",
             order_guarantee: "100% Satisfaction Guarantee. If you're not completely satisfied with the results, we offer a 30-day money-back guarantee.",
@@ -2175,7 +2186,23 @@
             zone_label3: "Offices",
             zone_label4: "Houses",
             zone_label5: "Factory",
-            zone_label6: "Hotles"
+            zone_label6: "Hotles",
+            dosage:"Foarmat: -Seringue de 40 ml",
+            askqus:"Why choose DESTROUCH GEL?",
+            askqusLi1:"Effective elimination of all cockroach species",
+            askqusLi2:"Formula based on natural ingredients (OLEANDRINE )",
+            askqusLi3:"Long-lasting action",
+            askqusLi4:"Easy to apply with a practical applicator syringe",
+            askqusLi5:"Formulated without harmful chemicals",
+            instru_title:"Applying DESTROUCH GEL is simple:",
+            instruLi1:"Carefully remove the cap",
+            instruLi2:"Place drops (approximately 5 mm in diameter) on the affected areas. The number of droplets depends on the severity of the insect infestation.",
+            instruLi3:"Close after each use.",
+            reginfo_title:"Registration Information",
+            reginfoLi1:"Registration of the formula with the C.A.P. department of Algiers",
+            reginfoLi2:"Registration of the trademark with INAPI (Algerian National Institute of Industrial Property) under number 23384",
+            reginfoEMg:"In case of emergency, call poison control center (10 32)"
+
 
 
         },
@@ -2183,10 +2210,11 @@
             home: "الرئيسية",
             features: "المميزات",
             specs: "المواصفات",
-
             order: "اطلب الآن",
-            hero_title: "حل <span>مبيد الصراصير</span> المهني",
-            hero_desc: "جل ديستروش هو مبيد حشري عالي الفعالية مصمم للقضاء على جميع أنواع الصراصير. صيغته الطبيعية تضمن نتائج طويلة الأمد بدون مواد كيميائية ضارة.",
+            hero_title: " جل   ديستروتش<span> للقضاء </span>على جميع أنواع الصراصير",
+            hero_intro:"تخلص من الصراصير نهائًيا بمحلول طبيعي فعال ومثبت. ",
+            hero_desc: "جل ديستروتش مبيد حشري مصمم خصي ًصا للقضاء على جميع أنواع الصراصير. تركيبته الفريدة، المصنوعة من مكونات طبيعية،\n" +
+                "تضمن القضاء على هذه اآلفات بفعالية طويلة األمد دون استخدام مواد كيميائية ضارة باإلنسان و البيئة .",
             order_now: "اطلب الآن",
             badge_only: "فقط",
             features_title: "احتياطات الاستخدام",
@@ -2203,7 +2231,7 @@
             specs_base: "القاعدة:",
             specs_water: "الماء",
 
-            specs_usage: "تعليمات الاستخدام",
+            specs_usage: "طريقة الاستخدام",
             specs_step1: "قم بإزالة الغطاء بعناية.",
             specs_step2: "ضع قطرات صغيرة (بقطر حوالي 3 مم) في المناطق المصابة.",
             specs_step3: "أغلق الغطاء بعد كل استخدام.",
@@ -2257,7 +2285,27 @@
             zone_label3: "المكاتب",
             zone_label4: "المنازل",
             zone_label5: "المصانع",
-            zone_label6: "الفنادق"
+            zone_label6: "الفنادق",
+            dosage:"الحجم: حقنة 40 مل",
+            askqus:"لماذا تختار جل ديستروتش؟",
+            askqusLi1:"القضاء على جميع أنواع الصراصير بفعالية",
+            askqusLi2:"تركيبة من مكونات طبيعية (أولياندرين)",
+            askqusLi3:"مفعول طويل األمد",
+            askqusLi4:"عملي و سهل اإلستخدام عن طريق حقنة",
+            askqusLi5:"تركيبة خالية من المواد الكيميائية الضارة",
+            instru_title:"استخدام جل ديستروتش بسيط :",
+            instruLi1:"انزع الغطاء بحرص",
+            instruLi2:"ضع قطرات )قطرها حوالي 5 مم( على المناطق المصابة. يعتمد عدد القطرات على شدة اإلصابة.",
+            instruLi3:"أغلق العبوة بعد كل استخدام.",
+            reginfo_title:"معلومات العلامة",
+            reginfoLi1:"التركيبة مسجلة لدى المركز الوطني لعلم السموم، قسم مركز مكافحة التسمم بالجزائر",
+            reginfoLi2:"العالمة التجارية مسجلة لدى المعهد الوطني الجزائري للملكية الصناعية )INAPI )تحت رقم 233384",
+            reginfoEMg:"في حالة الطوارئ، اتصل بمركز مكافحة السموم (1032) "
+
+
+
+
+
         }
     };
 
