@@ -1394,8 +1394,39 @@
             .inapi-logo {
                 max-width: 250px;
             }
+
         }
 
+
+
+
+        .contact-container{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 25px;
+        }
+
+        .contact-container img{
+            width: 10rem;
+            height: auto;
+        }
+
+
+        @media(max-width: 700px){
+
+            .contact-container{
+
+                display: flex;
+
+                justify-content: space-between;
+                flex-direction: row;
+                margin-right: 6rem;
+
+            }
+
+        }
         @media (max-width: 480px) {
             .inapi-section {
                 padding: 20px;
@@ -1419,9 +1450,49 @@
             .registration-list li::before {
                 font-size: 1.25rem;
             }
+
+            @media (max-width: 480px) {
+                .inapi-section {
+                    padding: 20px;
+                    margin: 10px;
+                }
+
+                .emergency-notice {
+                    flex-direction: column;
+                    text-align: center;
+                    padding: 1rem;
+                }
+
+                .emergency-icon {
+                    margin-bottom: 0.5rem;
+                }
+
+                .registration-item {
+                    padding: 0.75rem 0 0.75rem 1.5rem;
+                }
+
+                .registration-list li::before {
+                    font-size: 1.25rem;
+                }
+                .contact-container img{
+                    width: 6rem;
+                }
+            }
         }
-
-
+        .img-footer-container-phone {
+            display: none;
+        }
+        @media(max-width: 420px){
+            .img-footer-container {
+                display: none;
+            }
+            .img-footer-container-phone {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                gap: 25px;
+            }
+        }
 
     </style>
 </head>
@@ -1875,8 +1946,27 @@
 
             </div>
         </div>
+
+
+        <div class="img-footer-container-phone">
+            <div>
+
+                <img alt="Algerian Flag" class="footer-logo-image"
+                     src="https://i.ibb.co/7JBDLVbJ/logo-removebg-preview.png">
+
+                <img alt="Company Logo" class="footer-logo-image"
+                     src="https://i.ibb.co/Wpfg7LrM/Picsart-25-03-29-18-18-44-841.png">
+
+            </div>
+            <div class="info">
+                <h4>🏢 Manufactured by : EL ZOUMOR LI EL HANDASA FILAHIA</h4>
+                <h2>📍 Adresse : KEDADRA - MOSTAGANEM - ALGERIA</h2>
+                <h2>📞 0560 20 00 90</h2>
+            </div>
+
+        </div>
         <div class="footer-about">
-            <a class="footer-logo" href="#">DESTROUCH GELgit</a>
+            <a class="footer-logo" href="#">DESTROUCH GEL</a>
             <p class="footer-text">For all cockroach problems, this high-quality gel offers an easy-to-apply and
                 effective solution, free from harmful chemical additives..</p>
             <div class="footer-social">
@@ -1888,13 +1978,20 @@
         </div>
 
 
-        <div class="footer-links-column">
-            <h3 class="footer-title">Contact</h3>
-            <ul class="footer-links">
-                <li class="footer-link"><a href="tel:0560200090">(+213) 0560200090</a></li>
-                <li class="footer-link"><a href="#">Contact Form</a></li>
-            </ul>
+        <div class="contact-container">
+            <div class="footer-links-column">
+                <h3 class="footer-title">Contact</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="tel:0560200090">(+213) 0560200090</a></li>
+                    <li class="footer-link"><a href="#">Contact Form</a></li>
+                </ul>
+            </div>
+
+                <img src="https://i.ibb.co/rGzCpnHT/distrouch-gel.gif"/>
+
+
         </div>
+
 
 
     </div>
