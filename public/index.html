@@ -771,6 +771,7 @@
 
     const revealElements = document.querySelectorAll(".reveal");
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const heroSection = document.querySelector(".hero");
 
     if (!("IntersectionObserver" in window) || prefersReducedMotion) {
         revealElements.forEach((element) => element.classList.add("is-visible"));
@@ -787,6 +788,20 @@
         });
 
         revealElements.forEach((element) => revealObserver.observe(element));
+    }
+
+    if (heroSection && "IntersectionObserver" in window) {
+        const stickyObserver = new IntersectionObserver(([entry]) => {
+            document.body.classList.toggle("show-sticky-order", !entry.isIntersecting);
+        }, {
+            threshold: 0.08
+        });
+
+        stickyObserver.observe(heroSection);
+    } else {
+        window.addEventListener("scroll", () => {
+            document.body.classList.toggle("show-sticky-order", window.scrollY > 520);
+        }, { passive: true });
     }
 
     document.getElementById("order-form").addEventListener("submit", async function (event) {
