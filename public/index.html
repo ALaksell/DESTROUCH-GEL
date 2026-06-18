@@ -48,15 +48,7 @@
 </header>
 
 <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-media" aria-hidden="true">
-            <img class="hero-product" src="https://i.ibb.co/fdDx6TWQ/Picsart-25-03-29-16-02-55-435.webp" alt="">
-            <div class="price-badge">
-                <span data-lang="badge_only">Only</span>
-                <strong>690DA</strong>
-            </div>
-        </div>
-
+    <section class="hero reveal" aria-labelledby="hero-title">
         <div class="container hero-inner">
             <div class="hero-copy">
                 <p class="eyebrow" data-lang="hero_eyebrow">Registered 40ml gel syringe</p>
@@ -76,10 +68,20 @@
                     <span data-lang="assurance_price">690DA fixed price</span>
                 </div>
             </div>
+
+            <div class="hero-showcase" aria-label="DESTROUCH GEL product preview">
+                <div class="hero-product-shell">
+                    <img class="hero-product" src="https://i.ibb.co/fdDx6TWQ/Picsart-25-03-29-16-02-55-435.webp" alt="DESTROUCH GEL cockroach killer syringe">
+                    <div class="price-badge">
+                        <span data-lang="badge_only">Only</span>
+                        <strong>690DA</strong>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="proof-strip" id="proof" aria-label="Quick product facts">
+    <section class="proof-strip reveal" id="proof" aria-label="Quick product facts">
         <div class="container proof-grid">
             <div class="proof-item">
                 <span>40ml</span>
@@ -100,7 +102,7 @@
         </div>
     </section>
 
-    <section class="section product-section" id="product">
+    <section class="section product-section reveal" id="product">
         <div class="container section-grid">
             <div class="section-intro">
                 <p class="eyebrow" data-lang="product_eyebrow">Product benefits</p>
@@ -141,7 +143,7 @@
         </div>
     </section>
 
-    <section class="section specs-section" aria-labelledby="specs-title">
+    <section class="section specs-section reveal" aria-labelledby="specs-title">
         <div class="container specs-layout">
             <div class="specs-copy">
                 <p class="eyebrow" data-lang="specs_eyebrow">Technical profile</p>
@@ -175,7 +177,7 @@
         </div>
     </section>
 
-    <section class="section zones-section" aria-labelledby="zones-title">
+    <section class="section zones-section reveal" aria-labelledby="zones-title">
         <div class="container">
             <div class="section-heading">
                 <p class="eyebrow" data-lang="zones_eyebrow">Application zones</p>
@@ -211,7 +213,7 @@
         </div>
     </section>
 
-    <section class="section usage-section" id="usage">
+    <section class="section usage-section reveal" id="usage">
         <div class="container usage-layout">
             <div class="usage-gallery" aria-label="Application photos">
                 <img src="https://i.ibb.co/VYX82ysN/Screenshot-20250322-231153-Chrome-picaai.png" alt="Applying DESTROUCH GEL in a corner" loading="lazy" decoding="async">
@@ -249,7 +251,7 @@
         </div>
     </section>
 
-    <section class="section safety-section" id="safety">
+    <section class="section safety-section reveal" id="safety">
         <div class="container safety-layout">
             <div class="safety-copy">
                 <p class="eyebrow" data-lang="safety_eyebrow">Safety and registration</p>
@@ -286,7 +288,7 @@
         </div>
     </section>
 
-    <section class="section faq-section" aria-labelledby="faq-title">
+    <section class="section faq-section reveal" aria-labelledby="faq-title">
         <div class="container faq-layout">
             <div class="section-intro">
                 <p class="eyebrow" data-lang="faq_eyebrow">FAQ</p>
@@ -325,7 +327,7 @@
         </div>
     </section>
 
-    <section class="order-section" id="order">
+    <section class="order-section reveal" id="order">
         <div class="container order-layout">
             <div class="order-copy">
                 <p class="eyebrow" data-lang="order_eyebrow">Fast order</p>
@@ -766,6 +768,26 @@
 
     document.getElementById("lang-en").addEventListener("click", () => translatePage("en"));
     document.getElementById("lang-ar").addEventListener("click", () => translatePage("ar"));
+
+    const revealElements = document.querySelectorAll(".reveal");
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (!("IntersectionObserver" in window) || prefersReducedMotion) {
+        revealElements.forEach((element) => element.classList.add("is-visible"));
+    } else {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            });
+        }, {
+            rootMargin: "0px 0px -12% 0px",
+            threshold: 0.16
+        });
+
+        revealElements.forEach((element) => revealObserver.observe(element));
+    }
 
     document.getElementById("order-form").addEventListener("submit", async function (event) {
         event.preventDefault();
