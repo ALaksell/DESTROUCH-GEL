@@ -391,7 +391,7 @@ h3 {
 .hero-showcase::before {
     content: "";
     position: absolute;
-    width: min(90%, 470px);
+    width: min(92%, 500px);
     aspect-ratio: 1;
     background: linear-gradient(145deg, rgba(200, 16, 46, 0.1), rgba(35, 122, 87, 0.08));
     border: 1px solid rgba(200, 16, 46, 0.12);
@@ -402,20 +402,23 @@ h3 {
 
 .hero-product-shell {
     position: relative;
-    width: min(100%, 520px);
-    min-height: 560px;
+    width: min(100%, 560px);
+    min-height: 590px;
     display: grid;
     place-items: center;
     isolation: isolate;
 }
 
 .hero-product {
-    width: min(100%, 470px);
-    max-height: 590px;
+    --float-scale: 1.08;
+    --float-scale-peak: 1.14;
+    width: min(100%, 505px);
+    max-height: 620px;
     object-fit: contain;
-    filter: drop-shadow(0 34px 36px rgba(23, 24, 28, 0.2));
+    filter: drop-shadow(0 36px 38px rgba(23, 24, 28, 0.23));
     transform-origin: center;
     animation: productBreath 5s ease-in-out infinite;
+    will-change: transform;
 }
 
 .price-badge {
@@ -1194,10 +1197,10 @@ select.form-control {
 @keyframes productBreath {
     0%,
     100% {
-        transform: translateY(0) rotate(-1deg);
+        transform: translateY(0) rotate(-1.5deg) scale(var(--float-scale));
     }
     50% {
-        transform: translateY(-12px) rotate(1deg);
+        transform: translateY(-18px) rotate(1.5deg) scale(var(--float-scale-peak));
     }
 }
 
@@ -1368,15 +1371,17 @@ select.form-control {
     }
 
     .hero-product-shell {
-        min-height: 380px;
-        width: min(100%, 430px);
+        min-height: 410px;
+        width: min(100%, 460px);
     }
 
     .hero-product {
+        --float-scale: 1.12;
+        --float-scale-peak: 1.18;
         width: auto;
-        height: min(68vw, 350px);
-        max-height: 350px;
-        max-width: min(100%, 370px);
+        height: min(76vw, 390px);
+        max-height: 390px;
+        max-width: min(100%, 410px);
     }
 
     .price-badge {
@@ -1484,13 +1489,15 @@ select.form-control {
     }
 
     .hero-product-shell {
-        min-height: 330px;
+        min-height: 360px;
     }
 
     .hero-product {
-        height: min(76vw, 305px);
-        max-height: 305px;
-        max-width: min(100%, 320px);
+        --float-scale: 1.18;
+        --float-scale-peak: 1.24;
+        height: min(88vw, 355px);
+        max-height: 355px;
+        max-width: min(100%, 360px);
     }
 
     .price-badge {
@@ -1561,13 +1568,15 @@ select.form-control {
     }
 
     .hero-product-shell {
-        min-height: 310px;
+        min-height: 350px;
     }
 
     .hero-product {
-        height: 285px;
-        max-height: 285px;
-        max-width: min(100%, 310px);
+        --float-scale: 1.22;
+        --float-scale-peak: 1.28;
+        height: min(92vw, 350px);
+        max-height: 350px;
+        max-width: min(100%, 360px);
     }
 
     .price-badge {
