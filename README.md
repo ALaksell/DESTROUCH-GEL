@@ -53,11 +53,14 @@ This project is built using core web technologies:
 
 The project has a straightforward and easy-to-understand file structure:
 
-\`\`\`
+
 destrouch-gel-ecommerce/
 ├── index.html          # The main HTML file containing all page content.
+
 ├── index.css           # The primary stylesheet for design and animations.
+
 └── README.md           # This documentation file.
+
 \`\`\`
 
 ## Contribution Guidelines
