@@ -1,73 +1,141 @@
-# DESTROUCH GEL E-commerce Website
+<div align="center">
 
-## Project Overview
+# DESTROUCH GEL
 
-This is my first web development project: a single-page e-commerce website for "DESTROUCH GEL - Professional Cockroach Killer." The site aims to inform potential customers about the product and facilitate direct orders. It's built with fundamental web technologies, making it an excellent learning experience for beginners.
+**A bilingual product-ordering website for DESTROUCH GEL cockroach control.**
 
-**Core Features:**
+My first e-commerce project: a focused storefront for product information, safety guidance, and direct customer orders in Algeria.
 
-*   **Product Information:** Detailed descriptions, technical specifications, and usage instructions.
-*   **Interactive Sections:** FAQ accordion for common questions.
-*   **Order Form:** Simple form for customer details and order placement.
-*   **Multilingual Support:** Toggle between English and Arabic content.
-*   **Responsive Design:** Adapts to various screen sizes for optimal viewing on desktop and mobile.
-*   **Subtle Animations:** Enhances user experience with smooth transitions and visual feedback.
+[Source Code](https://github.com/ALaksell/DESTROUCH-GEL)
 
-## Local Setup
+![Node.js and Express](https://img.shields.io/badge/Node.js-Express-339933?logo=nodedotjs&logoColor=white)
+![Deployment configuration](https://img.shields.io/badge/Deployment-Vercel-000000?logo=vercel&logoColor=white)
 
-To get a copy of this project up and running on your local machine, follow these steps:
+</div>
 
-1.  **Clone the repository:**
+![DESTROUCH GEL storefront showing the product, price, navigation, and order action](docs/readme/project-preview.webp)
 
-    \`\`\`bash
-    git clone https://github.com/ALaksell/DESTROUCH-GEL.git
-    cd destrouch-gel-ecommerce
-    \`\`\`
+## About the project
 
-2.  **Open the `index.html` file:**
-    Since this is a static website, you can simply open the `index.html` file in your web browser.
+DESTROUCH GEL is a single-product e-commerce storefront for a 40 ml cockroach control gel. It gives prospective customers a clear way to review the product, learn how it is used, read safety information, and submit an order with delivery details.
 
-    \`\`\`bash
-    # On macOS
-    open index.html
+The site is designed for customers in Algeria and supports both English and Arabic. Switching to Arabic also changes the document direction to right-to-left, so the experience remains usable in both languages.
 
-    # On Windows
-    start index.html
+## Main features
 
-    # On Linux
-    xdg-open index.html
-    \`\`\`
+- English and Arabic interface with runtime language switching
+- Responsive product landing page for desktop and mobile browsers
+- Product specifications, application zones, and usage instructions
+- Product safety and registration information in a dedicated section
+- Accessible navigation menu and expandable FAQ items
+- Customer order form with name, phone, wilaya, address, and quantity fields
+- `POST /order` endpoint for saving orders to Microsoft SQL Server
+- Vercel rewrite configuration for routing deployment requests to the API
 
-    For a better development experience, you might consider using a local web server (e.g., the "Live Server" extension in VS Code).
+## Main project areas
 
-## Technologies Used
+| Module | Purpose |
+| --- | --- |
+| `public/index.html` | Storefront structure, translated content, order form, and browser interactions |
+| `public/index.css` | Responsive layout, visual styling, and motion preferences |
+| `api/index.js` | Express API entry point for submitted orders |
+| `app.js` | Alternative local Express server entry point |
+| `test.js` | Database connection and customer-order retrieval script |
+| `vercel.json` | Vercel rewrite configuration |
 
-This project is built using core web technologies:
+## Programming languages
 
-*   **HTML5:** Provides the structure and content of the web pages.
-*   **CSS3:** Styles the website, including responsive layouts and subtle animations for an improved user experience.
-*   **JavaScript:** Adds interactivity, such as the navigation toggle, FAQ accordion, and language switching functionality.
-*   **Google Fonts:** Used for custom typography.
+- HTML
+- CSS
+- JavaScript
 
-## Project Structure
+## Technology stack
 
-The project has a straightforward and easy-to-understand file structure:
+| Area | Technology |
+| --- | --- |
+| Interface | HTML and vanilla JavaScript |
+| Styling | CSS with responsive media queries |
+| Backend | Node.js and Express |
+| Database | Microsoft SQL Server through `mssql` |
+| Configuration | Environment variables with `dotenv` |
+| Deployment | Vercel configuration |
 
+## Run locally
 
-destrouch-gel-ecommerce/
+### Prerequisites
 
+- Node.js and npm
+- Access to a Microsoft SQL Server database with a compatible `customers` table
 
-├── index.html          # The main HTML file containing all page content.
+### 1. Clone the repository
 
-├── index.css           # The primary stylesheet for design and animations.
+```bash
+git clone https://github.com/ALaksell/DESTROUCH-GEL.git
+cd DESTROUCH-GEL
+```
 
-└── README.md           # This documentation file.
+### 2. Install the locked dependencies
 
-\`\`\`
+```bash
+npm ci
+```
 
-## Contribution Guidelines
+### 3. Set the required configuration
 
-As this is a personal first project, direct contributions via pull requests are not actively sought for this specific repository. However, you are welcome to fork the repository, experiment with the code, and use it as a learning resource for your own projects!
+The application expects one server-side environment variable:
 
+| Variable | Purpose |
+| --- | --- |
+| `DB_CONNECTION` | Microsoft SQL Server connection string used for orders |
 
+For the current `npm start` entry point, set it in your PowerShell session before starting the server:
+
+```powershell
+$env:DB_CONNECTION = "your_sql_server_connection_string"
+```
+
+Do not commit connection strings or other private credentials.
+
+### 4. Start the server
+
+```bash
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Order API
+
+The browser submits delivery information to `POST /order`. The API expects this JSON body:
+
+```json
+{
+  "nom": "Last name",
+  "prenom": "First name",
+  "phone_number": "Phone number",
+  "wilaya": "Wilaya",
+  "address": "Delivery address",
+  "quantity": "1"
+}
+```
+
+On a successful insert, the API returns a confirmation message. The SQL Server database must provide a `customers` table whose fields match the order data used by the server.
+
+## Testing
+
+```bash
+npm test
+```
+
+This runs the repository's database connection and customer-order retrieval script. Set `DB_CONNECTION` first, because the test requires access to the configured database.
+
+## Production
+
+The project does not define a separate build or preview command. Its included Vercel configuration rewrites requests to the API entry point.
+
+Set `DB_CONNECTION` in the deployment environment before publishing so submitted orders can reach the SQL Server database.
+
+## Author
+
+Created by [ALaksell](https://github.com/ALaksell) as a first e-commerce project.
 
